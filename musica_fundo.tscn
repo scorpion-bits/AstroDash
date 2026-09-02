@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://8btqe7dmk4kl"]
+
+[ext_resource type="AudioStream" uid="uid://c6y7orpq76rg0" path="res://asstes/game song.mp3" id="1_5gy41"]
+
+[node name="MusicaFundo" type="AudioStreamPlayer2D" unique_id=1085244506]
+stream = ExtResource("1_5gy41")
+autoplay = true
