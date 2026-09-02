@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ydgkv3omwcyw"]
+
+[ext_resource type="Script" uid="uid://iwujkif0rx7g" path="res://Rooms/Mode/Singleplayer/single_player.gd" id="1_mmv7l"]
+[ext_resource type="Texture2D" uid="uid://bwfalil1xvvkk" path="res://Rooms/Mode/Singleplayer/Assets/fundo.png" id="2_g2xvs"]
+[ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://Players/player.tscn" id="3_0bwuh"]
+[ext_resource type="PackedScene" uid="uid://bg43bspotbaqw" path="res://Perigos/meteoro.tscn" id="4_n8mxw"]
+[ext_resource type="PackedScene" uid="uid://ubegukkiwpjr" path="res://Huds/tentar novamente/hud.tscn" id="5_tk30u"]
+
+[sub_resource type="Curve2D" id="Curve2D_fc0e3"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 103, -195, 0, 0, 0, 0, 2024, -196, 0, 0, 0, 0, 2030, 885, 0, 0, 0, 0, 98, 885, 0, 0, 0, 0, 101, -195, 0, 0, 0, 0, 103, -195)
+}
+point_count = 6
+
+[node name="SiglePlayer" type="Node2D" unique_id=2126955777]
+script = ExtResource("1_mmv7l")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1403432180]
+offset_left = -236.0
+offset_top = -163.0
+offset_right = 2140.0
+offset_bottom = 1277.0
+texture = ExtResource("2_g2xvs")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=558116633]
+wait_time = 0.8
+autostart = true
+
+[node name="MobPath" type="Path2D" parent="." unique_id=390120459]
+position = Vector2(-104, 196)
+curve = SubResource("Curve2D_fc0e3")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=721318254]
+position = Vector2(103, -195)
+rotation = -0.0005205621
+
+[node name="Player" parent="." unique_id=45027659 instance=ExtResource("3_0bwuh")]
+position = Vector2(940, 521)
+collision_mask = 2
+
+[node name="Enemy" parent="." unique_id=763097664 instance=ExtResource("4_n8mxw")]
+position = Vector2(-104, 194)
+
+[node name="HUD" parent="." unique_id=1565151600 instance=ExtResource("5_tk30u")]
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 1925.0
+offset_bottom = 1080.0

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dsbgeqekmaw6j"]
+
+[ext_resource type="Script" uid="uid://d2qd4hvjibri1" path="res://Players/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cati20jxwhiug" path="res://Players/Assets/Sprite-0001.png" id="2_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqtel"]
+radius = 29.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebum8"]
+radius = 51.009804
+
+[node name="Player" type="Area2D" unique_id=45027659 groups=["Players"]]
+collision_mask = 3
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=688993551]
+texture_filter = 1
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(2, 2)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1338042541]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_hqtel")
+
+[node name="ReviveArea" type="Area2D" parent="." unique_id=1078829420]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ReviveArea" unique_id=642765033]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_ebum8")
+debug_color = Color(0.8968192, 0.11652557, 0.7195033, 0.41960785)
+
+[node name="InvencibilityTimer" type="Timer" parent="." unique_id=1844908222]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="ReviveArea" to="." method="_on_revive_area_area_entered"]
+[connection signal="body_entered" from="ReviveArea" to="." method="_on_revive_area_body_entered"]
+[connection signal="timeout" from="InvencibilityTimer" to="." method="_on_invencibility_timer_timeout"]
