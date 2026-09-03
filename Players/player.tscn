@@ -10,7 +10,7 @@ radius = 29.0
 radius = 51.009804
 
 [node name="Player" type="Area2D" unique_id=45027659 groups=["Players"]]
-collision_mask = 3
+collision_mask = 7
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=688993551]
@@ -34,7 +34,10 @@ debug_color = Color(0.8968192, 0.11652557, 0.7195033, 0.41960785)
 wait_time = 2.0
 one_shot = true
 
+[node name="NitroTimer" type="Timer" parent="." unique_id=886437029]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="area_entered" from="ReviveArea" to="." method="_on_revive_area_area_entered"]
 [connection signal="body_entered" from="ReviveArea" to="." method="_on_revive_area_body_entered"]
 [connection signal="timeout" from="InvencibilityTimer" to="." method="_on_invencibility_timer_timeout"]
+[connection signal="timeout" from="NitroTimer" to="." method="_on_nitro_timer_timeout"]

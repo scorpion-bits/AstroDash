@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://drksjkwk2h7uh" path="res://Rooms/Mode/multiplayer/Coop/coop.gd" id="1_7oi5l"]
 [ext_resource type="Texture2D" uid="uid://bwfalil1xvvkk" path="res://Rooms/Mode/Singleplayer/Assets/fundo.png" id="2_wxp33"]
+[ext_resource type="PackedScene" uid="uid://dmydr5xrr44kg" path="res://PowerUps/Itens/item_power_up.tscn" id="2_ylod2"]
 [ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://Players/player.tscn" id="3_4aduk"]
-[ext_resource type="PackedScene" uid="uid://bg43bspotbaqw" path="res://Perigos/meteoro.tscn" id="4_13f4o"]
+[ext_resource type="Script" uid="uid://csnl0i0jg6hfa" path="res://PowerUps/power_up_data.gd" id="3_46n34"]
+[ext_resource type="Resource" uid="uid://clgk4y0tj20t3" path="res://PowerUps/Itens/shield/Escudo.tres" id="4_jx843"]
 [ext_resource type="PackedScene" uid="uid://ubegukkiwpjr" path="res://Huds/tentar novamente/hud.tscn" id="5_5b88o"]
+[ext_resource type="Resource" uid="uid://cgtm7ayo3dw8u" path="res://PowerUps/Itens/nitro/Nitro.tres" id="5_vvu6y"]
 
 [sub_resource type="Curve2D" id="Curve2D_fc0e3"]
 bake_interval = 0.01
@@ -13,8 +16,10 @@ _data = {
 }
 point_count = 6
 
-[node name="SiglePlayer" type="Node2D" unique_id=2126955777]
+[node name="Coop" type="Node2D" unique_id=2126955777]
 script = ExtResource("1_7oi5l")
+cena_powerup = ExtResource("2_ylod2")
+lista_de_poderes = Array[ExtResource("3_46n34")]([ExtResource("5_vvu6y"), ExtResource("4_jx843")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1403432180]
 offset_left = -236.0
@@ -25,6 +30,10 @@ texture = ExtResource("2_wxp33")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=558116633]
 wait_time = 0.8
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="." unique_id=1298853978]
+wait_time = 8.0
 autostart = true
 
 [node name="MobPath" type="Path2D" parent="." unique_id=390120459]
@@ -44,11 +53,10 @@ modulate = Color(1, 0.120000005, 0.120000005, 1)
 position = Vector2(1232, 541)
 player_id = 2
 
-[node name="Enemy" parent="." unique_id=763097664 instance=ExtResource("4_13f4o")]
-position = Vector2(-104, 194)
-
 [node name="HUD" parent="." unique_id=1565151600 instance=ExtResource("5_5b88o")]
 offset_left = 3.0
 offset_top = -2.0
 offset_right = 1925.0
 offset_bottom = 1080.0
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_timer_timeout"]

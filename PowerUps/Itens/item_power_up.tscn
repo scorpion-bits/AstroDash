@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dmydr5xrr44kg"]
+
+[ext_resource type="Script" uid="uid://b8jmaecajc3lx" path="res://PowerUps/Itens/item_power_up.gd" id="1_s8h5d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebum8"]
+radius = 40.012497
+
+[node name="ItemPowerUp" type="Area2D" unique_id=1902226972 groups=["powerups"]]
+collision_layer = 4
+script = ExtResource("1_s8h5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=935062139]
+texture_filter = 1
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1956438258]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ebum8")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

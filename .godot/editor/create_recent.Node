@@ -1,7 +1,8 @@
-Button
-TextureButton
-GridContainer
-TextureRect
 Timer
-CollisionShape2D
 Area2D
+CollisionShape2D
+Sprite2D
+TextureButton
+TextureRect
+Button
+GridContainer

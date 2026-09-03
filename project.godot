@@ -31,6 +31,8 @@ folder_colors={
 "res://Huds/": "green",
 "res://Perigos/": "red",
 "res://Players/": "yellow",
+"res://PowerUps/": "pink",
+"res://PowerUps/Itens/": "pink",
 "res://Rooms/": "blue",
 "res://asstes/": "orange"
 }

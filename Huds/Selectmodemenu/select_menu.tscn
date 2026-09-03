@@ -42,6 +42,18 @@ region = Rect2(384, 144, 45, 35)
 atlas = ExtResource("5_nqk4r")
 region = Rect2(383, 143, 47, 37)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebum8"]
+atlas = ExtResource("3_yafdh")
+region = Rect2(52, 144, 46, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvf33"]
+atlas = ExtResource("4_gwnwq")
+region = Rect2(52, 144, 46, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svhir"]
+atlas = ExtResource("5_nqk4r")
+region = Rect2(51, 143, 48, 38)
+
 [node name="SelectMenu" type="Control" unique_id=827431008]
 layout_mode = 3
 anchors_preset = 15
@@ -94,6 +106,18 @@ scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_r6b4s")
 texture_pressed = SubResource("AtlasTexture_nw28f")
 texture_hover = SubResource("AtlasTexture_mvv5q")
+
+[node name="config" type="TextureButton" parent="." unique_id=1062601323]
+texture_filter = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 573.0
+offset_right = 253.0
+offset_bottom = 613.0
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_ebum8")
+texture_pressed = SubResource("AtlasTexture_xvf33")
+texture_hover = SubResource("AtlasTexture_svhir")
 
 [connection signal="pressed" from="solo" to="." method="_on_solo_pressed"]
 [connection signal="pressed" from="coop" to="." method="_on_coop_pressed"]

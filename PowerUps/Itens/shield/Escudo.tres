@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PowerUpData" format=3 uid="uid://clgk4y0tj20t3"]
+
+[ext_resource type="Script" uid="uid://csnl0i0jg6hfa" path="res://PowerUps/power_up_data.gd" id="1_rph8i"]
+[ext_resource type="Texture2D" uid="uid://dmubc7t81bbot" path="res://PowerUps/Itens/shield/shield.png" id="2_hrjus"]
+
+[resource]
+script = ExtResource("1_rph8i")
+item_name = "Escudo"
+texture = ExtResource("2_hrjus")
+time = 0.0
+metadata/_custom_type_script = "uid://csnl0i0jg6hfa"

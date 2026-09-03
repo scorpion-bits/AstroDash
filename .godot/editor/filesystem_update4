@@ -1,7 +1,16 @@
-res://select_menu.tscn
-res://Huds/menuinicial/menu_inicial.gd
 res://Huds/Selectmodemenu/select_menu.tscn
-res://Huds/Selectmodemenu/select_menu.gd
-res://Huds/tentar novamente/hud.gd
-res://Huds/tentar novamente/hud.tscn
-res://Huds/menuinicial/menu_inicial.tscn
+res://Itens/item_power_up.gd
+res://Itens/item_power_up.tscn
+res://Rooms/Mode/Singleplayer/sigle_player.tscn
+res://Players/player.gd
+res://power_up_data.gd
+res://PowerUps/Itens/item_power_up.tscn
+res://PowerUps/Itens/cronometro/cronometro.tres
+res://PowerUps/Itens/nitro/Nitro.tres
+res://PowerUps/Itens/shield/Escudo.tres
+res://PowerUps/Itens/item_power_up.gd
+res://Rooms/Mode/multiplayer/Coop/coop.gd
+res://Rooms/Mode/multiplayer/Coop/coop.tscn
+res://Players/player.tscn
+res://Rooms/Mode/Singleplayer/single_player.gd
+res://PowerUps/power_up_data.gd
