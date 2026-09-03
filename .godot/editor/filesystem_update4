@@ -1,4 +1,7 @@
-res://Rooms/Mode/Singleplayer/sigle_player.tscn
-res://Huds/menuinicial/menu_inicial.tscn
+res://select_menu.tscn
 res://Huds/menuinicial/menu_inicial.gd
-res://Rooms/Mode/multiplayer/Coop/coop.tscn
+res://Huds/Selectmodemenu/select_menu.tscn
+res://Huds/Selectmodemenu/select_menu.gd
+res://Huds/tentar novamente/hud.gd
+res://Huds/tentar novamente/hud.tscn
+res://Huds/menuinicial/menu_inicial.tscn

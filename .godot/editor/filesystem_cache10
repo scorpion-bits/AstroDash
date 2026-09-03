@@ -1,39 +1,48 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1788397119
-::res://asstes/::1788388197
-icon.svg::CompressedTexture2D::6666677631029415611::1788388117::1788388197::1::::<><><>0<>0<>3562e305014f967b2c983d40928cecdb<>res://.godot/imported/icon.svg-397225b370f7e10f678b6d3d1cf7f3b2.ctex::
-::res://asstes/Ost/::1788388197
-game song.mp3::AudioStreamMP3::7000209447985822561::1788388117::1788388197::1::::<><><>0<>0<>7cd3f9f2ceab7e753ccb51b820349954<>res://.godot/imported/game song.mp3-c0b319bdc389faf9b57fa74e10e2e778.mp3str::
-musica_fundo.tscn::PackedScene::2319478673054080707::1788388117::0::1::::<><><>0<>0<><>::uid://c6y7orpq76rg0::::res://asstes/Ost/game song.mp3
-::res://Huds/::1788396888
-::res://Huds/menuinicial/::1788397119
-::res://Huds/menuinicial/assets/::1788397110
-menuinicial background.png::CompressedTexture2D::1501379778350544857::1788396928::1788397110::1::::<><><>0<>0<>742b0b714541f071cfd672344bc4ee2e<>res://.godot/imported/menuinicial background.png-dd84fe56288cca3c196004dc11d72866.ctex::
-::res://Huds/menuinicial/botões/::1788397119
-botaonormal.png::CompressedTexture2D::8938070469920235690::1788397024::1788397119::1::::<><><>0<>0<>6df00bd6af38b7e0f242ace6332535ed<>res://.godot/imported/botaonormal.png-1e6078b8f24d412dcf9268e404fa963b.ctex::
-botaoprecionado.png::CompressedTexture2D::1515023458018457531::1788397064::1788397119::1::::<><><>0<>0<>90cd59e32ba68a9473c10b641c874cd9<>res://.godot/imported/botaoprecionado.png-8aa06a28485e631249ad68c11d43d17b.ctex::
-botaoselecionado.png::CompressedTexture2D::4628476982640182646::1788397042::1788397119::1::::<><><>0<>0<>b2b1dc398784d182241fda8e207981e7<>res://.godot/imported/botaoselecionado.png-a112547a923bb0c646068138e08fa068.ctex::
-::res://Huds/tentar novamente/::1788388117
-hud.gd::GDScript::1210572910859098745::1788388117::0::1::::<>Control<><>0<>0<><>::
-hud.tscn::PackedScene::1406095899630177007::1788388117::0::1::::<><><>0<>0<><>::uid://rin7utsyyiij::::res://Huds/tentar novamente/hud.gd
-::res://Perigos/::1788388845
-meteoro.gd::GDScript::8298972948493964929::1788388117::0::1::::<>RigidBody2D<><>0<>0<><>::
-meteoro.tscn::PackedScene::2869123531234289774::1788388845::0::1::::<><><>0<>0<><>::uid://dqic4v81k8i62::::res://Perigos/meteoro.gd<>uid://chhk05nmufhac::::res://Perigos/Assets/meteoro.png
-::res://Perigos/Assets/::1788388197
-meteoro.png::CompressedTexture2D::5279267328261252422::1788388117::1788388197::1::::<><><>0<>0<>0bd4e5c1f912c85d875069ef5ec8af6e<>res://.godot/imported/meteoro.png-4c9babd52fd862dbff0d97769067f54d.ctex::
-::res://Players/::1788388117
-player.gd::GDScript::9087625212896687830::1788388117::0::1::::<>Area2D<><>0<>0<><>::
-player.tscn::PackedScene::8425097906473400959::1788388117::0::1::::<><><>0<>0<><>::uid://d2qd4hvjibri1::::res://Players/player.gd<>uid://cati20jxwhiug::::res://Players/Assets/Sprite-0001.png
-::res://Players/Assets/::1788388197
-Sprite-0001.png::CompressedTexture2D::4812599825152594310::1788388117::1788388197::1::::<><><>0<>0<>d5fc5fffb41f6cdb7c0d71f87c264ec0<>res://.godot/imported/Sprite-0001.png-71776ebceb05686191b238d389d04b3c.ctex::
-::res://Rooms/::1788388117
-::res://Rooms/Mode/::1788388117
-::res://Rooms/Mode/multiplayer/::1788388117
-::res://Rooms/Mode/multiplayer/Coop/::1788388790
-coop.gd::GDScript::8374225708191338583::1788388117::0::1::::<>Node2D<><>0<>0<><>::
-coop.tscn::PackedScene::3811002938569028775::1788388790::0::1::::<><><>0<>0<><>::uid://drksjkwk2h7uh::::res://Rooms/Mode/multiplayer/Coop/coop.gd<>uid://bwfalil1xvvkk::::res://Rooms/Mode/Singleplayer/Assets/fundo.png<>uid://dsbgeqekmaw6j::::res://Players/player.tscn<>uid://bg43bspotbaqw::::res://Perigos/meteoro.tscn<>uid://ubegukkiwpjr::::res://Huds/tentar novamente/hud.tscn
-::res://Rooms/Mode/Singleplayer/::1788396934
-sigle_player.tscn::PackedScene::1691108687368480766::1788396934::0::1::::<><><>0<>0<><>::uid://iwujkif0rx7g::::res://Rooms/Mode/Singleplayer/single_player.gd<>uid://bwfalil1xvvkk::::res://Rooms/Mode/Singleplayer/Assets/fundo.png<>uid://dsbgeqekmaw6j::::res://Players/player.tscn<>uid://bg43bspotbaqw::::res://Perigos/meteoro.tscn<>uid://ubegukkiwpjr::::res://Huds/tentar novamente/hud.tscn
-single_player.gd::GDScript::608158009547265626::1788388117::0::1::::<>Node2D<><>0<>0<><>::
-::res://Rooms/Mode/Singleplayer/Assets/::1788388197
-fundo.png::CompressedTexture2D::3940917214625622730::1788388117::1788388197::1::::<><><>0<>0<>aab2adfd1215e66bb9804485adf1b2bc<>res://.godot/imported/fundo.png-e232686e0e74805d9edea1285921290d.ctex::
+78098b89c88a74ebe8c20117b8754620
+::res://::1788444940
+::res://asstes/::1788444150
+icon.svg::CompressedTexture2D::6666677631029415611::1788441132::1788444150::1::::<><><>0<>0<>3562e305014f967b2c983d40928cecdb<>res://.godot/imported/icon.svg-397225b370f7e10f678b6d3d1cf7f3b2.ctex::
+::res://asstes/Ost/::1788441132
+game song.mp3::AudioStreamMP3::7000209447985822561::1788441132::1788441132::1::::<><><>0<>0<>7cd3f9f2ceab7e753ccb51b820349954<>res://.godot/imported/game song.mp3-c0b319bdc389faf9b57fa74e10e2e778.mp3str::
+musica_fundo.tscn::PackedScene::2319478673054080707::1788441132::0::1::::<><><>0<>0<><>::uid://c6y7orpq76rg0::::res://asstes/Ost/game song.mp3
+::res://Huds/::1788441132
+::res://Huds/menuinicial/::1788444903
+menu_inicial.gd::GDScript::3143857246881710309::1788444903::0::1::::<>Control<><>0<>0<><>::
+menu_inicial.tscn::PackedScene::7503857018856136671::1788441132::0::1::::<><><>0<>0<><>::uid://vnjrgp564i4h::::res://Huds/menuinicial/assets/menuinicial background.png<>uid://bk154tgebx4qj::::res://Huds/menuinicial/menu_inicial.gd<>uid://d0lwykjmofmja::::res://Huds/menuinicial/botões/botaonormal.png<>uid://vt5hksucyhb4::::res://Huds/menuinicial/botões/botaoprecionado.png<>uid://b67clswudypf7::::res://Huds/menuinicial/botões/botaoselecionado.png
+::res://Huds/menuinicial/assets/::1788441132
+menuinicial background.png::CompressedTexture2D::1501379778350544857::1788441132::1788441132::1::::<><><>0<>0<>742b0b714541f071cfd672344bc4ee2e<>res://.godot/imported/menuinicial background.png-dd84fe56288cca3c196004dc11d72866.ctex::
+::res://Huds/menuinicial/botões/::1788441132
+botaonormal.png::CompressedTexture2D::8938070469920235690::1788441132::1788441132::1::::<><><>0<>0<>6df00bd6af38b7e0f242ace6332535ed<>res://.godot/imported/botaonormal.png-1e6078b8f24d412dcf9268e404fa963b.ctex::
+botaoprecionado.png::CompressedTexture2D::1515023458018457531::1788441132::1788441132::1::::<><><>0<>0<>90cd59e32ba68a9473c10b641c874cd9<>res://.godot/imported/botaoprecionado.png-8aa06a28485e631249ad68c11d43d17b.ctex::
+botaoselecionado.png::CompressedTexture2D::4628476982640182646::1788441132::1788441132::1::::<><><>0<>0<>b2b1dc398784d182241fda8e207981e7<>res://.godot/imported/botaoselecionado.png-a112547a923bb0c646068138e08fa068.ctex::
+::res://Huds/Selectmodemenu/::1788444940
+fundobase.png::CompressedTexture2D::5906209398267563665::1788444080::1788444150::1::::<><><>0<>0<>e9b53a85ff46cf3b0e4fdf15e0b77018<>res://.godot/imported/fundobase.png-5268ce659859c0e5d0aff2e94b26bd03.ctex::
+select_menu.tscn::PackedScene::2618106411900701007::1788444940::0::1::::<><><>0<>0<><>::uid://cqfan2g1a5akn::::res://Huds/Selectmodemenu/fundobase.png<>uid://chae6sf7moc1d::::res://Huds/Selectmodemenu/botão/normal.png<>uid://cqekaxxheymb4::::res://Huds/Selectmodemenu/botão/pressed.png<>uid://cngpkplyfsjt7::::res://Huds/Selectmodemenu/botão/hover.png
+::res://Huds/Selectmodemenu/botão/::1788444940
+hover.png::CompressedTexture2D::5698612019976478826::1788444108::1788444940::1::::<><><>0<>0<>c00cc5a6e4a4a218bfc48ce063f05048<>res://.godot/imported/hover.png-09b974641768613e92d8fc5210f5c05c.ctex::
+normal.png::CompressedTexture2D::5264462455049394159::1788444094::1788444940::1::::<><><>0<>0<>c6e5546313a32de64a15949baee6982b<>res://.godot/imported/normal.png-127f5f17c7bbc11b0c82c3e68f926c8c.ctex::
+pressed.png::CompressedTexture2D::5904728790430529423::1788444126::1788444940::1::::<><><>0<>0<>660efa5b3a04036e8449f6b676242ad9<>res://.godot/imported/pressed.png-46bdd0d772f686a65a1ad2e6f254319f.ctex::
+::res://Huds/tentar novamente/::1788441132
+hud.gd::GDScript::1210572910859098745::1788441132::0::1::::<>Control<><>0<>0<><>::
+hud.tscn::PackedScene::1406095899630177007::1788441132::0::1::::<><><>0<>0<><>::uid://rin7utsyyiij::::res://Huds/tentar novamente/hud.gd
+::res://Perigos/::1788441132
+meteoro.gd::GDScript::8298972948493964929::1788441132::0::1::::<>RigidBody2D<><>0<>0<><>::
+meteoro.tscn::PackedScene::2869123531234289774::1788441132::0::1::::<><><>0<>0<><>::uid://dqic4v81k8i62::::res://Perigos/meteoro.gd<>uid://chhk05nmufhac::::res://Perigos/Assets/meteoro.png
+::res://Perigos/Assets/::1788441132
+meteoro.png::CompressedTexture2D::5279267328261252422::1788441132::1788441132::1::::<><><>0<>0<>0bd4e5c1f912c85d875069ef5ec8af6e<>res://.godot/imported/meteoro.png-4c9babd52fd862dbff0d97769067f54d.ctex::
+::res://Players/::1788441132
+player.gd::GDScript::9087625212896687830::1788441132::0::1::::<>Area2D<><>0<>0<><>::
+player.tscn::PackedScene::8425097906473400959::1788441132::0::1::::<><><>0<>0<><>::uid://d2qd4hvjibri1::::res://Players/player.gd<>uid://cati20jxwhiug::::res://Players/Assets/Sprite-0001.png
+::res://Players/Assets/::1788441132
+Sprite-0001.png::CompressedTexture2D::4812599825152594310::1788441132::1788441132::1::::<><><>0<>0<>d5fc5fffb41f6cdb7c0d71f87c264ec0<>res://.godot/imported/Sprite-0001.png-71776ebceb05686191b238d389d04b3c.ctex::
+::res://Rooms/::1788441132
+::res://Rooms/Mode/::1788441132
+::res://Rooms/Mode/multiplayer/::1788441132
+::res://Rooms/Mode/multiplayer/Coop/::1788441132
+coop.gd::GDScript::8374225708191338583::1788441132::0::1::::<>Node2D<><>0<>0<><>::
+coop.tscn::PackedScene::3811002938569028775::1788441132::0::1::::<><><>0<>0<><>::uid://drksjkwk2h7uh::::res://Rooms/Mode/multiplayer/Coop/coop.gd<>uid://bwfalil1xvvkk::::res://Rooms/Mode/Singleplayer/Assets/fundo.png<>uid://dsbgeqekmaw6j::::res://Players/player.tscn<>uid://bg43bspotbaqw::::res://Perigos/meteoro.tscn<>uid://ubegukkiwpjr::::res://Huds/tentar novamente/hud.tscn
+::res://Rooms/Mode/Singleplayer/::1788441132
+sigle_player.tscn::PackedScene::1691108687368480766::1788441132::0::1::::<><><>0<>0<><>::uid://iwujkif0rx7g::::res://Rooms/Mode/Singleplayer/single_player.gd<>uid://bwfalil1xvvkk::::res://Rooms/Mode/Singleplayer/Assets/fundo.png<>uid://dsbgeqekmaw6j::::res://Players/player.tscn<>uid://bg43bspotbaqw::::res://Perigos/meteoro.tscn<>uid://ubegukkiwpjr::::res://Huds/tentar novamente/hud.tscn
+single_player.gd::GDScript::608158009547265626::1788441132::0::1::::<>Node2D<><>0<>0<><>::
+::res://Rooms/Mode/Singleplayer/Assets/::1788441132
+fundo.png::CompressedTexture2D::3940917214625622730::1788441132::1788441132::1::::<><><>0<>0<>aab2adfd1215e66bb9804485adf1b2bc<>res://.godot/imported/fundo.png-e232686e0e74805d9edea1285921290d.ctex::
