@@ -42,6 +42,7 @@ position = Vector2(507, 536)
 [node name="Player2" parent="." unique_id=821604955 instance=ExtResource("3_4aduk")]
 modulate = Color(1, 0.120000005, 0.120000005, 1)
 position = Vector2(1232, 541)
+player_id = 2
 
 [node name="Enemy" parent="." unique_id=763097664 instance=ExtResource("4_13f4o")]
 position = Vector2(-104, 194)

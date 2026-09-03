@@ -1,13 +1,4 @@
-res://game.tscn
-res://hud.tscn
-res://hud.gd
-res://sigle_player.tscn
 res://Rooms/Mode/Singleplayer/sigle_player.tscn
-res://Rooms/Mode/Singleplayer/single_player.gd
-res://Huds/hud.tscn
-res://Huds/tentar novamente/hud.tscn
-res://Players/player.gd
-res://Perigos/meteoro.tscn
-res://Players/player.tscn
+res://Huds/menuinicial/menu_inicial.tscn
+res://Huds/menuinicial/menu_inicial.gd
 res://Rooms/Mode/multiplayer/Coop/coop.tscn
-res://Rooms/Mode/multiplayer/Coop/coop.gd
