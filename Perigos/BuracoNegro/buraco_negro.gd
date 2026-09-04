@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 			var forca = forca_puxao / max(distancia, 10.0) 
 			area.position += direcao * forca * delta
 			
-			if distancia < 20.0:
+			if distancia < 30.0:
 				matar_jogador(area)
 
 func matar_jogador(player: Area2D):

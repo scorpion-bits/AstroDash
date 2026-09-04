@@ -122,3 +122,4 @@ texture_hover = SubResource("AtlasTexture_svhir")
 [connection signal="pressed" from="solo" to="." method="_on_solo_pressed"]
 [connection signal="pressed" from="coop" to="." method="_on_coop_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="config" to="." method="_on_config_pressed"]

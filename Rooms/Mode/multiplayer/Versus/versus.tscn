@@ -1,55 +1,97 @@
 [gd_scene format=3 uid="uid://bnw0h8mk7bymn"]
 
 [ext_resource type="Script" uid="uid://chmu0stel8uuj" path="res://Rooms/Mode/multiplayer/Versus/versus.gd" id="1_bhsvm"]
+[ext_resource type="Texture2D" uid="uid://bwfalil1xvvkk" path="res://Rooms/Mode/Singleplayer/Assets/fundo.png" id="2_2mprc"]
+[ext_resource type="PackedScene" uid="uid://dmydr5xrr44kg" path="res://PowerUps/Itens/item_power_up.tscn" id="2_4bbln"]
 [ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://Players/player.tscn" id="2_hm1xt"]
 [ext_resource type="PackedScene" uid="uid://cl6asve83hcmw" path="res://Perigos/BuracoNegro/buraco_negro.tscn" id="3_oaod5"]
+[ext_resource type="Script" uid="uid://csnl0i0jg6hfa" path="res://PowerUps/power_up_data.gd" id="3_robs7"]
 [ext_resource type="PackedScene" uid="uid://c0erfnmty0qv2" path="res://Huds/HudVersus/hud_versus.tscn" id="4_id7gu"]
+[ext_resource type="Texture2D" uid="uid://b8y1s5inilmf5" path="res://PowerUps/Itens/nitro/Nitro.png" id="4_lyc6b"]
+[ext_resource type="Texture2D" uid="uid://dmubc7t81bbot" path="res://PowerUps/Itens/shield/shield.png" id="5_robs7"]
+
+[sub_resource type="Resource" id="Resource_kng6e"]
+script = ExtResource("3_robs7")
+item_name = "Nitro"
+type = 1
+texture = ExtResource("4_lyc6b")
+metadata/_custom_type_script = "uid://csnl0i0jg6hfa"
+
+[sub_resource type="Resource" id="Resource_lj0wj"]
+script = ExtResource("3_robs7")
+texture = ExtResource("5_robs7")
+time = 0.0
+metadata/_custom_type_script = "uid://csnl0i0jg6hfa"
 
 [node name="Versus" type="Node2D" unique_id=392897400]
 script = ExtResource("1_bhsvm")
+cena_powerup = ExtResource("2_4bbln")
+lista_de_poderes = Array[ExtResource("3_robs7")]([SubResource("Resource_kng6e"), SubResource("Resource_lj0wj")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=388854980]
+offset_left = -236.0
+offset_top = -163.0
+offset_right = 2140.0
+offset_bottom = 1277.0
+texture = ExtResource("2_2mprc")
 
 [node name="Player1" parent="." unique_id=45027659 instance=ExtResource("2_hm1xt")]
 modulate = Color(0.37283343, 0.29000002, 1, 1)
 position = Vector2(462, 337)
+speed = 700.0
 pode_empurrar = true
 
 [node name="Player2" parent="." unique_id=1942725085 instance=ExtResource("2_hm1xt")]
 modulate = Color(1, 0.19999999, 0.19999999, 1)
 position = Vector2(1367, 329)
 player_id = 2
+speed = 700.0
 pode_empurrar = true
 
 [node name="BuracoNegro" parent="." unique_id=2118891730 instance=ExtResource("3_oaod5")]
 position = Vector2(-345, 674)
+forca_puxao = 25000.0
 
 [node name="BuracoNegroTimer" type="Timer" parent="." unique_id=798495333]
-wait_time = 10.0
+wait_time = 5.0
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="." unique_id=1991870682]
+wait_time = 4.0
 autostart = true
 
 [node name="HudVersus" parent="." unique_id=1848742350 instance=ExtResource("4_id7gu")]
-anchors_preset = 15
+anchors_preset = 0
 anchor_left = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_vertical = 2
+anchor_right = 0.0
+grow_horizontal = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
 [node name="player1score" parent="HudVersus" index="0" unique_id=1906352763]
-offset_left = 353.00003
-offset_top = 1.5258789e-05
-offset_right = 429.00003
-offset_bottom = 23.000015
+offset_left = 55.00003
+offset_top = 50.999996
+offset_right = 131.00003
+offset_bottom = 74.0
 
 [node name="player2score" parent="HudVersus" index="1" unique_id=231651086]
-offset_left = 1271.0
-offset_top = -1.9999995
-offset_right = 1346.0
-offset_bottom = 21.0
+offset_left = 1655.0
+offset_top = 48.999996
+offset_right = 1730.0
+offset_bottom = 72.0
 
 [node name="campeao" parent="HudVersus" index="2" unique_id=827240001]
-offset_left = 943.0
-offset_top = 255.0
-offset_right = 983.0
-offset_bottom = 278.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 944.0
+offset_top = 472.0
+offset_right = 1044.0
+offset_bottom = 495.5
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GridContainer" parent="HudVersus" index="3" unique_id=343750766]
 offset_left = 938.0
@@ -57,6 +99,10 @@ offset_top = 527.0
 offset_right = 1048.0
 offset_bottom = 628.0
 
+[node name="JogarDeNovo" parent="HudVersus/GridContainer" index="0" unique_id=1157081786]
+text = "Jogar Novamente"
+
 [connection signal="timeout" from="BuracoNegroTimer" to="." method="_on_buraco_negro_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
 
 [editable path="HudVersus"]

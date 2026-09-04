@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://fwaneabuhg2c" path="res://Perigos/BuracoNegro/buraconegro.png" id="2_8pwxh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1spd"]
-radius = 126.64294
-height = 385.77597
+radius = 163.5345
+height = 549.3539
 
 [sub_resource type="Animation" id="Animation_l3hq5"]
 length = 0.001
@@ -50,6 +50,7 @@ _data = {
 script = ExtResource("1_8pwxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=410669201]
+modulate = Color(1, 1, 1, 0.13333334)
 texture_filter = 1
 scale = Vector2(5, 5)
 texture = ExtResource("2_8pwxh")

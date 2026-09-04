@@ -117,4 +117,4 @@ func _on_cronometro_timer_timeout() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if pode_empurrar and area.is_in_group("Players") and not is_dead and not area.is_dead:
 		var direcao = (global_position - area.global_position).normalized()
-		forca_empurrao = direcao * 8000.0
+		forca_empurrao = direcao * 5000.0
