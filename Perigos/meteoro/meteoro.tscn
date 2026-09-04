@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://bg43bspotbaqw"]
 
-[ext_resource type="Script" uid="uid://dqic4v81k8i62" path="res://Perigos/meteoro.gd" id="1_yqynx"]
-[ext_resource type="Texture2D" uid="uid://chhk05nmufhac" path="res://Perigos/Assets/meteoro.png" id="2_6vpm4"]
+[ext_resource type="Script" uid="uid://dqic4v81k8i62" path="res://Perigos/meteoro/meteoro.gd" id="1_hrm1k"]
+[ext_resource type="Texture2D" uid="uid://chhk05nmufhac" path="res://Perigos/meteoro/Assets/meteoro.png" id="2_p7gxg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
 radius = 39.051247
 
-[node name="Enemy" type="RigidBody2D" unique_id=763097664]
+[node name="Enemy" type="RigidBody2D" unique_id=763097664 groups=["meteoros"]]
 collision_layer = 2
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource("1_yqynx")
+script = ExtResource("1_hrm1k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1955284623]
 texture_filter = 1
 position = Vector2(-1.9073486e-06, 1.9073486e-06)
 scale = Vector2(2.6, 2.6)
-texture = ExtResource("2_6vpm4")
+texture = ExtResource("2_p7gxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1463202843]
 shape = SubResource("CircleShape2D_qi2p4")

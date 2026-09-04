@@ -36,8 +36,13 @@ one_shot = true
 
 [node name="NitroTimer" type="Timer" parent="." unique_id=886437029]
 
+[node name="CronometroTimer" type="Timer" parent="." unique_id=815440319]
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="area_entered" from="ReviveArea" to="." method="_on_revive_area_area_entered"]
 [connection signal="body_entered" from="ReviveArea" to="." method="_on_revive_area_body_entered"]
 [connection signal="timeout" from="InvencibilityTimer" to="." method="_on_invencibility_timer_timeout"]
 [connection signal="timeout" from="NitroTimer" to="." method="_on_nitro_timer_timeout"]
+[connection signal="timeout" from="CronometroTimer" to="." method="_on_cronometro_timer_timeout"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cl6asve83hcmw"]
+
+[ext_resource type="Script" uid="uid://bl1l0wqgn7sld" path="res://Perigos/BuracoNegro/buraco_negro.gd" id="1_8pwxh"]
+[ext_resource type="Texture2D" uid="uid://chhk05nmufhac" path="res://Perigos/meteoro/Assets/meteoro.png" id="2_l3hq5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e8ug"]
+radius = 174.01149
+
+[node name="BuracoNegro" type="Area2D" unique_id=2118891730]
+script = ExtResource("1_8pwxh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=410669201]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_l3hq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=915227704]
+shape = SubResource("CircleShape2D_0e8ug")
+debug_color = Color(0.3424133, 0.61, 0.3233, 0.13333334)

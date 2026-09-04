@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dmydr5xrr44kg" path="res://PowerUps/Itens/item_power_up.tscn" id="5_g2xvs"]
 [ext_resource type="PackedScene" uid="uid://ubegukkiwpjr" path="res://Huds/tentar novamente/hud.tscn" id="5_tk30u"]
 [ext_resource type="Resource" uid="uid://clgk4y0tj20t3" path="res://PowerUps/Itens/shield/Escudo.tres" id="6_nmc1v"]
+[ext_resource type="Resource" uid="uid://yrimhvwxj3ao" path="res://PowerUps/Itens/cronometro/cronometro.tres" id="6_tk30u"]
 
 [sub_resource type="Curve2D" id="Curve2D_fc0e3"]
 bake_interval = 0.01
@@ -19,7 +20,7 @@ point_count = 6
 [node name="SiglePlayer" type="Node2D" unique_id=2126955777]
 script = ExtResource("1_mmv7l")
 cena_powerup = ExtResource("5_g2xvs")
-lista_de_poderes = Array[ExtResource("4_0bwuh")]([ExtResource("4_tk30u"), ExtResource("6_nmc1v")])
+lista_de_poderes = Array[ExtResource("4_0bwuh")]([ExtResource("4_tk30u"), ExtResource("6_nmc1v"), ExtResource("6_tk30u")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1403432180]
 offset_left = -236.0
@@ -33,7 +34,7 @@ wait_time = 0.8
 autostart = true
 
 [node name="WaitTimer" type="Timer" parent="." unique_id=1106920441]
-wait_time = 8.0
+wait_time = 5.0
 autostart = true
 
 [node name="MobPath" type="Path2D" parent="." unique_id=390120459]

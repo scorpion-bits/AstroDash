@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var enemy_scene: PackedScene = preload("res://Perigos/meteoro.tscn")
+@export var enemy_scene: PackedScene = preload("res://Perigos/meteoro/meteoro.tscn")
 @export var cena_powerup: PackedScene
 @export var lista_de_poderes: Array[PowerUpData]
 
@@ -37,6 +37,17 @@ func _on_spawn_timer_timeout() -> void:
 	
 	var velocity = Vector2(randf_range(velocidade_minima, velocidade_maxima), 0.0)
 	enemy.linear_velocity = velocity.rotated(direction)
+	
+	var algum_crono_ativo = false
+	
+	if has_node("Player1") and not $Player1/CronometroTimer.is_stopped():
+		algum_crono_ativo = true
+		
+	if has_node("Player2") and not $Player2/CronometroTimer.is_stopped():
+		algum_crono_ativo = true
+		
+	if algum_crono_ativo:
+		enemy.desacelerar()
 	
 
 func check_game_over() -> void:

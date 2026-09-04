@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://clgk4y0tj20t3" path="res://PowerUps/Itens/shield/Escudo.tres" id="4_jx843"]
 [ext_resource type="PackedScene" uid="uid://ubegukkiwpjr" path="res://Huds/tentar novamente/hud.tscn" id="5_5b88o"]
 [ext_resource type="Resource" uid="uid://cgtm7ayo3dw8u" path="res://PowerUps/Itens/nitro/Nitro.tres" id="5_vvu6y"]
+[ext_resource type="Resource" uid="uid://yrimhvwxj3ao" path="res://PowerUps/Itens/cronometro/cronometro.tres" id="6_eys14"]
 
 [sub_resource type="Curve2D" id="Curve2D_fc0e3"]
 bake_interval = 0.01
@@ -19,7 +20,7 @@ point_count = 6
 [node name="Coop" type="Node2D" unique_id=2126955777]
 script = ExtResource("1_7oi5l")
 cena_powerup = ExtResource("2_ylod2")
-lista_de_poderes = Array[ExtResource("3_46n34")]([ExtResource("5_vvu6y"), ExtResource("4_jx843")])
+lista_de_poderes = Array[ExtResource("3_46n34")]([ExtResource("5_vvu6y"), ExtResource("4_jx843"), ExtResource("6_eys14")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1403432180]
 offset_left = -236.0
