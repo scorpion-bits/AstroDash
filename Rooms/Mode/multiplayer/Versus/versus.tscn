@@ -3,24 +3,60 @@
 [ext_resource type="Script" uid="uid://chmu0stel8uuj" path="res://Rooms/Mode/multiplayer/Versus/versus.gd" id="1_bhsvm"]
 [ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://Players/player.tscn" id="2_hm1xt"]
 [ext_resource type="PackedScene" uid="uid://cl6asve83hcmw" path="res://Perigos/BuracoNegro/buraco_negro.tscn" id="3_oaod5"]
+[ext_resource type="PackedScene" uid="uid://c0erfnmty0qv2" path="res://Huds/HudVersus/hud_versus.tscn" id="4_id7gu"]
 
 [node name="Versus" type="Node2D" unique_id=392897400]
 script = ExtResource("1_bhsvm")
 
-[node name="Player" parent="." unique_id=45027659 instance=ExtResource("2_hm1xt")]
-position = Vector2(1210, 337)
+[node name="Player1" parent="." unique_id=45027659 instance=ExtResource("2_hm1xt")]
+modulate = Color(0.37283343, 0.29000002, 1, 1)
+position = Vector2(462, 337)
 pode_empurrar = true
 
 [node name="Player2" parent="." unique_id=1942725085 instance=ExtResource("2_hm1xt")]
-position = Vector2(331, 298)
+modulate = Color(1, 0.19999999, 0.19999999, 1)
+position = Vector2(1367, 329)
 player_id = 2
 pode_empurrar = true
 
 [node name="BuracoNegro" parent="." unique_id=2118891730 instance=ExtResource("3_oaod5")]
-position = Vector2(-395, 319)
+position = Vector2(-345, 674)
 
 [node name="BuracoNegroTimer" type="Timer" parent="." unique_id=798495333]
 wait_time = 10.0
 autostart = true
 
+[node name="HudVersus" parent="." unique_id=1848742350 instance=ExtResource("4_id7gu")]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="player1score" parent="HudVersus" index="0" unique_id=1906352763]
+offset_left = 353.00003
+offset_top = 1.5258789e-05
+offset_right = 429.00003
+offset_bottom = 23.000015
+
+[node name="player2score" parent="HudVersus" index="1" unique_id=231651086]
+offset_left = 1271.0
+offset_top = -1.9999995
+offset_right = 1346.0
+offset_bottom = 21.0
+
+[node name="campeao" parent="HudVersus" index="2" unique_id=827240001]
+offset_left = 943.0
+offset_top = 255.0
+offset_right = 983.0
+offset_bottom = 278.0
+
+[node name="GridContainer" parent="HudVersus" index="3" unique_id=343750766]
+offset_left = 938.0
+offset_top = 527.0
+offset_right = 1048.0
+offset_bottom = 628.0
+
 [connection signal="timeout" from="BuracoNegroTimer" to="." method="_on_buraco_negro_timer_timeout"]
+
+[editable path="HudVersus"]

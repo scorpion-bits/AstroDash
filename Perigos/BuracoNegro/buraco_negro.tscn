@@ -1,20 +1,66 @@
 [gd_scene format=3 uid="uid://cl6asve83hcmw"]
 
 [ext_resource type="Script" uid="uid://bl1l0wqgn7sld" path="res://Perigos/BuracoNegro/buraco_negro.gd" id="1_8pwxh"]
-[ext_resource type="Texture2D" uid="uid://chhk05nmufhac" path="res://Perigos/meteoro/Assets/meteoro.png" id="2_l3hq5"]
+[ext_resource type="Texture2D" uid="uid://fwaneabuhg2c" path="res://Perigos/BuracoNegro/buraconegro.png" id="2_8pwxh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0e8ug"]
-radius = 174.01149
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1spd"]
+radius = 126.64294
+height = 385.77597
 
-[node name="BuracoNegro" type="Area2D" unique_id=2118891730]
+[sub_resource type="Animation" id="Animation_l3hq5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0e8ug"]
+resource_name = "idleblackhole"
+length = 1.000020014901459
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.20002, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 4, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p83nt"]
+_data = {
+&"RESET": SubResource("Animation_l3hq5"),
+&"idleblackhole": SubResource("Animation_0e8ug")
+}
+
+[node name="BuracoNegro" type="Area2D" unique_id=2118891730 groups=["blackhole"]]
 script = ExtResource("1_8pwxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=410669201]
-modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("2_l3hq5")
+scale = Vector2(5, 5)
+texture = ExtResource("2_8pwxh")
+hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=915227704]
-shape = SubResource("CircleShape2D_0e8ug")
+rotation = 0.9948377
+shape = SubResource("CapsuleShape2D_h1spd")
 debug_color = Color(0.3424133, 0.61, 0.3233, 0.13333334)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=581945227]
+root_node = NodePath("../CollisionShape2D")
+libraries/ = SubResource("AnimationLibrary_p83nt")
+autoplay = &"idleblackhole"

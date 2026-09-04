@@ -1,14 +1,10 @@
-res://Huds/menuinicial/menu_inicial.tscn
-res://Players/player.gd
-res://Rooms/Mode/multiplayer/Coop/coop.tscn
-res://Rooms/Mode/Singleplayer/sigle_player.tscn
-res://Perigos/meteoro.tscn
-res://Perigos/meteoro.gd
-res://Players/player.tscn
-res://Rooms/Mode/multiplayer/Coop/coop.gd
-res://Rooms/Mode/Singleplayer/single_player.gd
-res://Rooms/Mode/multiplayer/Versus/versus.tscn
-res://Rooms/Mode/multiplayer/Versus/versus.gd
-res://Perigos/meteoro/meteoro.tscn
 res://Perigos/BuracoNegro/buraco_negro.tscn
 res://Perigos/BuracoNegro/buraco_negro.gd
+res://Rooms/Mode/multiplayer/Versus/versus.tscn
+res://Rooms/Mode/multiplayer/Versus/versus.gd
+res://Huds/HudVersus/hud_versus.tscn
+res://Huds/HudVersus/hud_versus.gd
+res://Rooms/Mode/Singleplayer/sigle_player.tscn
+res://Players/player.tscn
+res://Huds/tentar novamente/hud.tscn
+res://Players/player.gd

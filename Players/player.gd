@@ -60,6 +60,8 @@ func revive():
 	is_invencible = true
 	modulate.a = 1.0
 	modulate = Color(1,1,0)
+	set_collision_layer_value(1, false)
+	set_collision_mask_value(2, false)
 	$InvencibilityTimer.start()
 
 func die():
@@ -115,4 +117,4 @@ func _on_cronometro_timer_timeout() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if pode_empurrar and area.is_in_group("Players") and not is_dead and not area.is_dead:
 		var direcao = (global_position - area.global_position).normalized()
-		forca_empurrao = direcao * 800.0
+		forca_empurrao = direcao * 8000.0
