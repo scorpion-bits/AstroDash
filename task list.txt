@@ -1,0 +1,62 @@
+# Checklist de Implementação: AstroDash Modo História
+
+Siga esta ordem para evitar refazer trabalho e manter a arquitetura limpa. Marque as caixinhas conforme for terminando cada etapa na Godot.
+
+## 1. Preparação e Componentes Básicos
+- [ ] Criar a pasta `Rooms/Mode/Story` para guardar tudo do novo modo.
+- [ ] **HealthComponent:** Criar `health_component.gd` e `health_component.tscn` (Node base).
+  - [ ] Adicionar variáveis: `max_health` e `current_health`.
+  - [ ] Criar função `take_damage(amount)` que também gerencia os frames de invencibilidade.
+  - [ ] Criar sinais (signals): `health_changed` e `died`.
+- [ ] **WeaponComponent:** Criar `weapon_component.gd` e `weapon_component.tscn`.
+  - [ ] Adicionar variáveis: `max_energy`, `current_energy`, `energy_cost_per_shot`, `energy_recovery_rate`.
+  - [ ] Criar lógica no `_process` para recuperar energia se o jogador não atirar por um tempo.
+  - [ ] Criar função `shoot()` que consome energia e instancia um tiro (Projétil).
+
+## 2. O Novo Jogador (`StoryPlayer`)
+- [ ] Criar nova cena `StoryPlayer.tscn` baseada em um `Area2D` ou `CharacterBody2D` (sugiro CharacterBody2D se quiser físicas de colisão melhores com as paredes, mas Area2D serve se manter o mesmo estilo atual).
+- [ ] Adicionar o Sprite da nave e colisões.
+- [ ] Instanciar o `HealthComponent` como filho do Player.
+  - [ ] Conectar o sinal `died` do componente para rodar a animação de morte/tela de game over do player.
+- [ ] Instanciar o `WeaponComponent` como filho do Player.
+  - [ ] Configurar para atirar ao apertar "Espaço", ligando a função ao WeaponComponent.
+- [ ] Criar uma UI local para o Player (ou na Sala Base) que mostre os 3 Corações (usando os sinais do HealthComponent) e a barra de Energia.
+
+## 3. O Gerenciador e Save System (`StoryLevelManager`)
+- [ ] Criar `story_level_manager.gd` (pode ser um Autoload/Singleton).
+- [ ] Criar variáveis: `current_phase` (int) e referências de dados salvos.
+- [ ] Criar função `save_game()`: salva `current_phase` num arquivo local usando `FileAccess`.
+- [ ] Criar função `load_game()`: lê o arquivo e ajusta a fase atual.
+- [ ] Criar função `restart_current_phase()`: Recarrega a cena da fase atual e avisa ao Player para encher a vida e energia.
+
+## 4. Estrutura das Fases (`RoomBase`)
+- [ ] Criar a cena `RoomBase.tscn`.
+- [ ] Adicionar os limites da tela (Paredes/Area2D para impedir o jogador de sair).
+- [ ] Adicionar variável exportada `export var room_background: Texture2D` no script para mudar o fundo facilmente.
+- [ ] Adicionar um nó `Portal` (escondido/desativado por padrão).
+- [ ] Criar a função genérica `finish_room()` que salva o jogo, pausa os inimigos e ativa o portal de saída.
+
+## 5. Implementando a Fase 1 (Sobrevivência Pura)
+- [ ] Criar `fase_1.tscn` herdando de `RoomBase.tscn`.
+- [ ] Desativar o `WeaponComponent` do Player (ou não dar a ele energia) no início desta fase.
+- [ ] Criar um spawner (Timer) específico para instanciar apenas **Meteoros** e o item **Lixo Espacial** (sucata).
+- [ ] Criar um Timer da sala (ex: 60 segundos). Quando acabar, parar os meteoros.
+- [ ] **Cutscene/Lore:** Instanciar a UI de diálogo do alienígena e o aviso de "Arma criada".
+- [ ] Chamar `finish_room()` para mostrar o portal.
+
+## 6. Implementando a Fase 2 (Primeiro Combate)
+- [ ] Criar `fase_2.tscn` herdando de `RoomBase.tscn`.
+- [ ] Garantir que o Player inicie com o `WeaponComponent` ativado e a energia cheia.
+- [ ] **Criar Inimigo 1 (Kamikaze):** Nave rápida que segue o jogador. Usar o `HealthComponent` nela.
+- [ ] **Criar Inimigo 2 (Sentinela):** Nave que se move aos poucos e atira na direção do player. Usar `HealthComponent` e `WeaponComponent` (versão inimigo).
+- [ ] Criar um Spawner de Ondas (Waves): Array de instâncias. Quando a tela ficar sem inimigos, chamar a próxima onda.
+- [ ] Ao destruir o último inimigo da última onda, chamar `finish_room()`.
+
+## 7. Implementando a Fase 3 (Boss: Nave-Mãe)
+- [ ] Criar `fase_3.tscn` herdando de `RoomBase.tscn`.
+- [ ] Criar a cena do Boss `NaveMae.tscn`.
+  - [ ] Adicionar o `HealthComponent` com muita Vida.
+  - [ ] Adicionar a barra de vida gigante do Boss na tela.
+- [ ] **Ataque 1:** Um Timer que instancia Drones Kamikazes a cada X segundos.
+- [ ] **Ataque 2:** Função de carregar laser. Criar um `Line2D` (vermelho transparente) para avisar, e depois de 1.5s criar um `ColorRect` ou raio hitbox que dá dano.
+- [ ] Conectar o sinal `died` do Boss para explodir e chamar `finish_room()`.

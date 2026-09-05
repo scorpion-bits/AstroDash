@@ -88,7 +88,6 @@ func game_check() -> void:
 	if not partida_acabou:
 		reiniciar_rodada()
 
-
 func _on_wait_timer_timeout() -> void:
 		var itens_na_tela = get_tree().get_nodes_in_group("powerups").size()
 		

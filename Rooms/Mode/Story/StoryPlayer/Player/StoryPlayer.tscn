@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dt5qfbw2fbjcc"]
+
+[ext_resource type="Script" uid="uid://fhyvnbqtdeux" path="res://Rooms/Mode/Story/StoryPlayer/Player/story_player.gd" id="1_chmls"]
+[ext_resource type="Texture2D" uid="uid://cati20jxwhiug" path="res://Players/Assets/Sprite-0001.png" id="1_lkl1o"]
+[ext_resource type="PackedScene" uid="uid://bsrphq0eukbhj" path="res://Rooms/Mode/Story/Componentes/HealthComponent/health_component.tscn" id="3_h0qu4"]
+[ext_resource type="PackedScene" uid="uid://kjsbtb7mkjv8" path="res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.tscn" id="4_fds1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkl1o"]
+radius = 25.019993
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmls"]
+bg_color = Color(0.06869546, 0.66411614, 0.8140168, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0qu4"]
+bg_color = Color(0.92, 0.04600001, 0.04600001, 1)
+
+[node name="StoryPlayer" type="CharacterBody2D" unique_id=1832787236]
+collision_mask = 7
+script = ExtResource("1_chmls")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=600521536]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_lkl1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=435167561]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_lkl1o")
+
+[node name="HealthComponent" parent="." unique_id=440873489 instance=ExtResource("3_h0qu4")]
+
+[node name="WeaponComponent" parent="." unique_id=864682556 instance=ExtResource("4_fds1a")]
+
+[node name="PlayerUI" type="CanvasLayer" parent="." unique_id=1053241877]
+
+[node name="EnergyBar" type="ProgressBar" parent="PlayerUI" unique_id=2135078485]
+offset_left = 1670.0
+offset_top = 68.0
+offset_right = 1884.0
+offset_bottom = 95.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_chmls")
+show_percentage = false
+
+[node name="HealthBar" type="ProgressBar" parent="PlayerUI" unique_id=1464762196]
+offset_left = 1592.0
+offset_top = 36.0
+offset_right = 1884.0
+offset_bottom = 63.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_h0qu4")
+show_percentage = false

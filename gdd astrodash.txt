@@ -1,0 +1,54 @@
+# Game Design Document (GDD) - AstroDash: Modo História
+
+Este documento unifica as ideias e decisões para o novo "Modo História" do AstroDash. Este modo será o foco principal do jogo, mas **o modo de sobrevivência e multiplayer antigos continuarão existindo separadamente e intactos**.
+
+## 1. O Universo e Lore (A Limpeza Cósmica)
+Você é um **"gari espacial"**. Sua modesta nave de coleta de lixo possui apenas escudos e motores. De repente, a galáxia é invadida por uma raça alienígena que começa a poluir e destruir tudo pelo caminho. Usando suas habilidades de voo e o próprio lixo espacial coletado, você precisa hackear e adaptar a sua nave de sucata para construir armas improvisadas e limpar a sujeira galáctica à força!
+
+*Nota sobre a Cutscene:* O jogador **não** pode pular a lore/cutscene na primeira vez que a assiste. Se ele morrer e tentar a fase novamente, um sistema de "pular lore" estará disponível.
+
+## 2. Visão Geral do Modo História
+* **Estrutura:** O jogo é dividido em Fases (Salas). A cada 3 fases, o jogador enfrenta um Boss e o ambiente (background) muda.
+* **Transição:** Ao finalizar a condição de vitória de uma fase, um **Portal** aparece para levar à próxima sala.
+* **Derrota e Retentativa:** Se o jogador morrer, ele **NÃO** volta para o início do jogo (Fase 1). Ele apenas recomeça a fase atual em que falhou.
+* **Restauração de Recursos:** Sempre que uma fase nova inicia (ou quando o jogador recomeça uma fase após morrer), **a Vida e a Energia da nave são totalmente restauradas**.
+* **Save/Load:** O jogo salva a fase alcançada, os itens desbloqueados e a lore assistida. 
+* **Arquitetura Desacoplada:** Teremos componentes e cenas isoladas (como `StoryPlayer.tscn` e `StoryLevelManager.gd`) para garantir código limpo e não quebrar os outros modos do jogo.
+
+## 3. As Mecânicas do Jogador (`StoryPlayer`)
+* **Sistema de Vidas:** O jogador possui **3 Vidas (Corações)** por padrão, em vez de morrer direto ao levar 1 hit.
+* **Sistema de Tiro (Sucata Armada):**
+  * O disparo é feito pela barra de **Espaço**.
+  * **Munição Baseada em Energia:** Atirar consome uma barra de energia. Se o jogador parar de atirar, a barra recarrega rapidamente (representando o resfriamento térmico da arma).
+* **Sistema de Itens (Estilo Hollow Knight):** (Implementação Futura). O jogador encontrará itens pelo universo e terá "slots" para equipá-los no menu antes de entrar nas salas. Isso permitirá montar diversas "builds" de limpeza espacial.
+
+## 4. O "Tutorial" (As 3 Primeiras Fases)
+
+### Fase 1: Coleta de Sucata (Sobrevivência)
+* **Mecânica:** O jogador **não** tem armas e não pode atirar.
+* **Objetivo:** Desviar dos perigos iniciais (**Meteoros**) e **coletar Lixo Espacial** até o tempo da fase acabar.
+* **Fim da Fase (Lore):** O tempo acaba, um líder alienígena aparece na tela para fazer uma ameaça. A IA da sua nave usa o lixo coletado para fabricar uma arma. Um aviso final diz: *"Sistemas de armamento online. Pressione ESPAÇO para atirar"*. O portal para a Fase 2 se abre.
+
+### Fase 2: O Primeiro Combate (Limpando a Sujeira)
+* **Mecânica:** O jogador agora pode atirar (barra de Espaço) e precisa gerenciar o resfriamento/energia.
+* **Objetivo:** Sobreviver e destruir ondas (waves) de naves inimigas.
+* **Tipos de Inimigos:**
+  1. *Drones Lixeiros (Kamikazes):* Naves velozes que tentam colidir diretamente com o jogador.
+  2. *Naves Tóxicas (Sentinelas):* Mantêm certa distância e disparam pequenos tiros na direção do jogador.
+* **Fim da Fase:** Matar a última onda libera o portal.
+
+### Fase 3: O Boss (Nave-Mãe Poluidora)
+* **Mecânica:** Combate direto contra o chefe. Sem inimigos menores soltos pelo mapa no início.
+* **O Boss (A Nave-Mãe):**
+  * Possui uma grande barra de vida visível na tela.
+  * *Ataque 1 (Despejo de Lixo):* Solta os Kamikazes da Fase 2 na arena para atrapalhar o jogador enquanto luta.
+  * *Ataque 2 (Laser Purificador):* Dispara lasers gigantes carregados, mostrando uma linha de aviso (telegrafando o ataque) segundos antes para o jogador conseguir escapar.
+
+## 5. Estrutura de Componentes e Escalabilidade (Regras de Código)
+Para o desenvolvimento ser ágil e o código pequeno e modular:
+* `HealthComponent` (Node): Lida apenas com vida máxima, receber dano, invencibilidade após o hit e emitir o sinal de morte. Será usado no `StoryPlayer`, Inimigos e Bosses.
+* `WeaponComponent` (Node): Gerencia o consumo de energia, o tempo de recarga térmica e instancia (spawna) os tiros na tela.
+* **Cena Base de Sala (`RoomBase.tscn`):**
+  * Todas as fases herdam dela.
+  * Terá a lógica padrão de verificar a condição de vitória e instanciar o portal.
+  * Conterá uma variável `export var room_background: Texture2D` no inspector para trocar o fundo estelar facilmente.

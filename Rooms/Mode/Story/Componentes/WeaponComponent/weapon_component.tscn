@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://kjsbtb7mkjv8"]
+
+[ext_resource type="Script" uid="uid://dpqfiu3suyqai" path="res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.gd" id="1_83b5a"]
+
+[node name="WeaponComponent" type="Node2D" unique_id=864682556]
+script = ExtResource("1_83b5a")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=1107457064]
+position = Vector2(0, -20)
