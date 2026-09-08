@@ -5,6 +5,8 @@ class_name StoryPlayer
 @export var is_in_cutscene: bool = false
 @export var cutscene_direction: Vector2 = Vector2.UP
 
+
+@onready var ghost_energy_bar: TextureProgressBar = $PlayerUI/GhostEnergyBar
 @onready var health_comp: HealthComponent = $HealthComponent
 @onready var weapon_comp: WeaponComponent = $WeaponComponent
 @onready var sprite: Sprite2D = $Sprite2D 
@@ -75,6 +77,12 @@ func _on_health_changed(current, max_hp) -> void:
 
 func _on_energy_changed(current_energy, max_energy) -> void:
 	energy_bar.value = current_energy
+	
+	if current_energy < ghost_energy_bar.value:
+		var tween = create_tween()
+		tween.tween_property(ghost_energy_bar, "value", current_energy, 0.3).set_delay(0.1)
+	else:
+		ghost_energy_bar.value = current_energy
 
 func _on_died() -> void:
 	print("Player morreu!")

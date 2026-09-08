@@ -31,6 +31,7 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
+"res://Globals/": "teal",
 "res://Huds/": "green",
 "res://Perigos/": "red",
 "res://Players/": "yellow",

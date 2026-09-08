@@ -1,7 +1,3 @@
 res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn
-res://event_bus.gd
+res://Rooms/Mode/Story/StoryPlayer/Player/health_ui.gd
 res://Rooms/Mode/Story/StoryPlayer/Player/story_player.gd
-res://health_ui.gd
-res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.tscn
-res://Rooms/Mode/Story/Componentes/ShakeComponent/ShakeComponent.gd
-res://Perigos/meteoro/meteoro.tscn
