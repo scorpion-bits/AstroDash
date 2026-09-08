@@ -4,15 +4,51 @@
 [ext_resource type="Texture2D" uid="uid://cati20jxwhiug" path="res://Players/Assets/Sprite-0001.png" id="1_lkl1o"]
 [ext_resource type="PackedScene" uid="uid://bsrphq0eukbhj" path="res://Rooms/Mode/Story/Componentes/HealthComponent/health_component.tscn" id="3_h0qu4"]
 [ext_resource type="PackedScene" uid="uid://kjsbtb7mkjv8" path="res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.tscn" id="4_fds1a"]
+[ext_resource type="Script" uid="uid://0je47t8cjpsx" path="res://health_ui.gd" id="5_h0qu4"]
+[ext_resource type="Texture2D" uid="uid://cklpuppiti4ds" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/energy_bar.png" id="5_tc5q5"]
+[ext_resource type="Texture2D" uid="uid://d3sp6nax76hjm" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/healthbar_over.png" id="5_u3mxw"]
+[ext_resource type="Texture2D" uid="uid://c7pniq6wvupda" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/health_bar.png" id="6_tc5q5"]
+[ext_resource type="Texture2D" uid="uid://c6y31lryr5uxg" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/prtraits_sheets.png" id="9_0laih"]
+[ext_resource type="PackedScene" uid="uid://hqtn0as24k78" path="res://Rooms/Mode/Story/Componentes/ShakeComponent/shake_component.tscn" id="10_t0uks"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkl1o"]
 radius = 25.019993
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmls"]
-bg_color = Color(0.06869546, 0.66411614, 0.8140168, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0uks"]
+atlas = ExtResource("9_0laih")
+region = Rect2(0, 0, 26, 26)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0qu4"]
-bg_color = Color(0.92, 0.04600001, 0.04600001, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_24kff"]
+atlas = ExtResource("9_0laih")
+region = Rect2(26, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_untkq"]
+atlas = ExtResource("9_0laih")
+region = Rect2(52, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otpqg"]
+atlas = ExtResource("9_0laih")
+region = Rect2(78, 0, 26, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0uks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0uks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24kff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_untkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otpqg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="StoryPlayer" type="CharacterBody2D" unique_id=1832787236]
 collision_mask = 5
@@ -28,6 +64,7 @@ position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_lkl1o")
 
 [node name="HealthComponent" parent="." unique_id=440873489 instance=ExtResource("3_h0qu4")]
+max_health = 6
 
 [node name="WeaponComponent" parent="." unique_id=864682556 instance=ExtResource("4_fds1a")]
 
@@ -41,18 +78,36 @@ shape = SubResource("CircleShape2D_lkl1o")
 
 [node name="PlayerUI" type="CanvasLayer" parent="." unique_id=1053241877]
 
-[node name="EnergyBar" type="ProgressBar" parent="PlayerUI" unique_id=2135078485]
-offset_left = 1670.0
-offset_top = 68.0
-offset_right = 1884.0
-offset_bottom = 95.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_chmls")
-show_percentage = false
+[node name="AstronautPortrait" type="AnimatedSprite2D" parent="PlayerUI" unique_id=477503813]
+position = Vector2(94, 76)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t0uks")
 
-[node name="HealthBar" type="ProgressBar" parent="PlayerUI" unique_id=1464762196]
-offset_left = 1592.0
-offset_top = 36.0
-offset_right = 1884.0
-offset_bottom = 63.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_h0qu4")
-show_percentage = false
+[node name="EnergyBar" type="TextureProgressBar" parent="PlayerUI" unique_id=1724985712]
+offset_left = 146.0
+offset_top = 108.0
+offset_right = 185.0
+offset_bottom = 110.0
+scale = Vector2(4, 4)
+step = 20.0
+value = 100.0
+texture_progress = ExtResource("5_tc5q5")
+
+[node name="HealthUI" type="TextureProgressBar" parent="PlayerUI" unique_id=734804153]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 106.0
+offset_bottom = 44.0
+scale = Vector2(4, 4)
+max_value = 6.0
+value = 6.0
+texture_over = ExtResource("5_u3mxw")
+texture_progress = ExtResource("6_tc5q5")
+texture_progress_offset = Vector2(40, 12)
+script = ExtResource("5_h0qu4")
+
+[node name="ShakeComponent" parent="PlayerUI" unique_id=1040993573 node_paths=PackedStringArray("target") instance=ExtResource("10_t0uks")]
+target = NodePath("../AstronautPortrait")
+amplitude = 6.0
+frequency = 50.0
+duration = 0.5

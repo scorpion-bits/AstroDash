@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://hqtn0as24k78"]
+
+[ext_resource type="Script" uid="uid://ctlerv5jwc4ur" path="res://Rooms/Mode/Story/Componentes/ShakeComponent/ShakeComponent.gd" id="1_6husl"]
+
+[node name="ShakeComponent" type="Node" unique_id=1040993573]
+script = ExtResource("1_6husl")

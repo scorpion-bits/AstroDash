@@ -16,6 +16,7 @@ config/icon="res://asstes/icon.svg"
 
 [autoload]
 
+EventBus="*uid://b6c8e6eq062hb"
 MusicaFundo="*uid://8btqe7dmk4kl"
 StoryLevelManager="*uid://cgf6l0xe7ehpr"
 DialogueManager="*uid://7wcx0tuf7syp"
@@ -89,6 +90,7 @@ right_2={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

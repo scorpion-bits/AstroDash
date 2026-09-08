@@ -8,17 +8,13 @@ class_name StoryPlayer
 @onready var health_comp: HealthComponent = $HealthComponent
 @onready var weapon_comp: WeaponComponent = $WeaponComponent
 @onready var sprite: Sprite2D = $Sprite2D 
-@onready var energy_bar: ProgressBar = $PlayerUI/EnergyBar
-@onready var health_bar: ProgressBar = $PlayerUI/HealthBar
+@onready var energy_bar: TextureProgressBar = $PlayerUI/EnergyBar
 @onready var hurtbox: Area2D = $Hurtbox
 
 func _ready() -> void:
 	if health_comp:
 		health_comp.health_changed.connect(_on_health_changed)
 		health_comp.died.connect(_on_died)
-		
-		health_bar.max_value = health_comp.max_health
-		health_bar.value = health_comp.current_health
 		
 	if weapon_comp:
 		weapon_comp.energy_changed.connect(_on_energy_changed)
@@ -75,8 +71,7 @@ func _physics_process(delta: float) -> void:
 		sprite.modulate.a = 1.0
 
 func _on_health_changed(current, max_hp) -> void:
-	print("Player tomou dano! Vida atual: ", current, "/", max_hp)
-	health_bar.value = current
+	EventBus.player_health_changed.emit(current, max_hp)
 
 func _on_energy_changed(current_energy, max_energy) -> void:
 	energy_bar.value = current_energy

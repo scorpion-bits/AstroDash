@@ -1,3 +1,6 @@
+res://Rooms/Mode/Story/Componentes/HealthComponent/assets/
+res://Rooms/Mode/Story/Componentes/ShakeComponent/
+res://
 res://Rooms/Mode/Story/Componentes/DialogueSystem/
 res://Huds/Dialogo/
 res://Rooms/Mode/Story/LevelManager/levels/Fase1/
@@ -8,6 +11,5 @@ res://Perigos/BuracoNegro/
 res://PowerUps/Itens/shield/
 res://PowerUps/Itens/nitro/
 res://PowerUps/Itens/cronometro/
-res://
 res://Huds/menuinicial/
 res://asstes/Ost/

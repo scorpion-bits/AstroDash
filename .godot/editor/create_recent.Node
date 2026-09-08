@@ -1,3 +1,8 @@
+Node
+AnimatedSprite2D
+Sprite2D
+TextureRect
+TextureProgressBar
 Camera2D
 CollisionShape2D
 Area2D
@@ -5,11 +10,6 @@ AudioStreamPlayer2D
 Timer
 RichTextLabel
 Label
-TextureRect
 Panel
 CanvasLayer
 RoomBase
-StaticBody2D
-Node
-ProgressBar
-Sprite2D
