@@ -1,11 +1,4 @@
 res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.tscn
-res://Rooms/Mode/Story/Itens/Sucata/sucata.tscn
-res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_line.gd
 res://Huds/Dialogo/dialogue_ui.tscn
-res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_ui.gd
-res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_manager.gd
-res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_trigger.tscn
-res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_trigger.gd
 res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn
-res://Rooms/Mode/Story/StoryPlayer/Player/story_player.gd
-res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.gd
+res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.gd

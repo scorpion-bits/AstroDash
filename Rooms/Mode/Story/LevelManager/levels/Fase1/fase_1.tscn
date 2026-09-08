@@ -4,15 +4,15 @@
 [ext_resource type="Script" uid="uid://dg5tvq6la5uld" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.gd" id="2_iajsu_script"]
 [ext_resource type="Script" uid="uid://dfse47ntl1cba" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_line.gd" id="3_5uc2h"]
 [ext_resource type="PackedScene" uid="uid://dt5qfbw2fbjcc" path="res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn" id="3_gctc8"]
+[ext_resource type="Texture2D" uid="uid://dy31h6qenoxo3" path="res://Huds/Dialogo/portraits/Player/Astronauta portrait.png" id="4_2wx6x"]
 [ext_resource type="Texture2D" uid="uid://bhhp7uhw8rauc" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/fundo fase.png" id="4_iajsu_bg"]
-[ext_resource type="Texture2D" uid="uid://c18nha187bm0r" path="res://asstes/icon.svg" id="4_mirka"]
 [ext_resource type="AudioStream" uid="uid://cjisdrjdxp7k7" path="res://Rooms/Mode/Story/audios/Vozes/Blip.wav" id="5_2wx6x"]
 
 [sub_resource type="Resource" id="Resource_wcote"]
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Ah... mais um dia de trabalho."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -22,7 +22,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Sabe, o pessoal lá nas Colônias de Elite acha que o lixo simplesmente desaparece. Eles compram o mais novo implante neural, o hiper-motor da moda, e o que acontece com os modelos do ano passado quando caem em desuso? Eles jogam no grande vazio. E é aí que eu entro."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -32,7 +32,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Olha só para isso... quilômetros e quilômetros de restos tecnológicos. Satélites mortos, drones de entrega abandonados, cruzadores estelares que custavam bilhões e agora não passam de sucata flutuante bloqueando a vista. A galáxia avança implacável, a tecnologia evolui, e simplesmente deixa esse rastro absurdo de peças obsoletas para trás. O universo virou um gigantesco cemitério de metal enferrujado, e eu sou o coveiro."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -42,7 +42,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Ou, como eles preferem colocar no meu contrato de baixo escalão: Técnico de Triagem de Resíduos Orbitais."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -52,7 +52,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "No fim das contas, a gente sabe a verdade. Eu sou só o gari do espaço. Vinte anos respirando ar reciclado da mesma cabine, bebendo café com gosto de óleo de motor e cheirando a ozônio queimado. Não tem glória nenhuma aqui fora."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -62,7 +62,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Ninguém faz estátuas para quem limpa a sujeira do universo. Mas, se eu e minha nave não estivéssemos aqui, em três meses os riquinhos não conseguiriam nem tirar seus cruzeiros de luxo da garagem sem bater de frente com um reator termonuclear de quinta mão."
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0
@@ -72,7 +72,7 @@ metadata/_custom_type_script = "uid://dfse47ntl1cba"
 script = ExtResource("3_5uc2h")
 speaker_name = "Astronauta"
 text = "Ok, vamos trabalhar!"
-portrait = ExtResource("4_mirka")
+portrait = ExtResource("4_2wx6x")
 voice_blip = ExtResource("5_2wx6x")
 pitch_base = 0.8
 chars_per_second = 40.0

@@ -24,7 +24,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	time_since_last_shot += delta
 	
-	#tempo para recarregar a energia
 	if time_since_last_shot > 2.0 and current_energy < max_energy:
 		current_energy += energy_recovery_rate * delta
 		current_energy = min(current_energy, max_energy)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3nscpcvoaj6"]
 
 [ext_resource type="Script" uid="uid://cgcl0qr7nv5f3" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_ui.gd" id="1_oqfc2"]
-[ext_resource type="Texture2D" uid="uid://c18nha187bm0r" path="res://asstes/icon.svg" id="1_yipck"]
+[ext_resource type="Texture2D" uid="uid://dy31h6qenoxo3" path="res://Huds/Dialogo/portraits/Player/Astronauta portrait.png" id="2_oqfc2"]
 
 [node name="DialogueUI" type="CanvasLayer" unique_id=699159936]
 script = ExtResource("1_oqfc2")
@@ -13,14 +13,16 @@ offset_right = 1792.0
 offset_bottom = 992.0
 
 [node name="Portrait" type="TextureRect" parent="Background" unique_id=1976637989]
+texture_filter = 1
 layout_mode = 0
 offset_left = 64.0
-offset_top = -96.0
+offset_top = -64.0
 offset_right = 320.0
-offset_bottom = 224.0
-texture = ExtResource("1_yipck")
+offset_bottom = 256.0
+texture = ExtResource("2_oqfc2")
 
 [node name="NameLabel" type="Label" parent="Background" unique_id=897731504]
+texture_filter = 1
 layout_mode = 0
 offset_left = 344.0
 offset_top = 24.0
@@ -30,6 +32,7 @@ scale = Vector2(1.5, 1.5)
 text = "Nome"
 
 [node name="TextLabel" type="RichTextLabel" parent="Background" unique_id=212237571]
+texture_filter = 1
 layout_mode = 0
 offset_left = 344.0
 offset_top = 64.0
