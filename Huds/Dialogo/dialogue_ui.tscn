@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://3nscpcvoaj6"]
+
+[ext_resource type="Script" uid="uid://cgcl0qr7nv5f3" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_ui.gd" id="1_oqfc2"]
+[ext_resource type="Texture2D" uid="uid://c18nha187bm0r" path="res://asstes/icon.svg" id="1_yipck"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=699159936]
+script = ExtResource("1_oqfc2")
+
+[node name="Background" type="Panel" parent="." unique_id=2123892563]
+offset_left = 128.0
+offset_top = 736.0
+offset_right = 1792.0
+offset_bottom = 992.0
+
+[node name="Portrait" type="TextureRect" parent="Background" unique_id=1976637989]
+layout_mode = 0
+offset_left = 64.0
+offset_top = -96.0
+offset_right = 320.0
+offset_bottom = 224.0
+texture = ExtResource("1_yipck")
+
+[node name="NameLabel" type="Label" parent="Background" unique_id=897731504]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 24.0
+offset_right = 391.0
+offset_bottom = 47.0
+scale = Vector2(1.5, 1.5)
+text = "Nome"
+
+[node name="TextLabel" type="RichTextLabel" parent="Background" unique_id=212237571]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 64.0
+offset_right = 1181.3333
+offset_bottom = 170.66663
+scale = Vector2(1.5, 1.5)
+text = "Ola isso aqui é um teste!"
+fit_content = true
+
+[node name="TypeTimer" type="Timer" parent="." unique_id=807449155]
+
+[node name="VoicePlayer" type="AudioStreamPlayer2D" parent="." unique_id=1438106683]

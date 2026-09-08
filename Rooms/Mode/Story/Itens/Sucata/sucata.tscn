@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cx6q8c7f215d2"]
+
+[ext_resource type="Script" path="res://Rooms/Mode/Story/Itens/Sucata/sucata.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c18nha187bm0r" path="res://asstes/icon.svg" id="2_icon"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sucata"]
+radius = 32.0
+
+[node name="Sucata" type="Area2D" groups=["sucatas"]]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_icon")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sucata")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

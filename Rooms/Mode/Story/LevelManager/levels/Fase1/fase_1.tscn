@@ -1,12 +1,106 @@
 [gd_scene format=3 uid="uid://dty3xc1uxq5jd"]
 
-[ext_resource type="Script" uid="uid://dg5tvq6la5uld" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.gd" id="1_iajsu"]
-[ext_resource type="PackedScene" uid="uid://dt5qfbw2fbjcc" path="res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn" id="2_gctc8"]
-[ext_resource type="Texture2D" uid="uid://vnjrgp564i4h" path="res://Huds/menuinicial/assets/menuinicial background.png" id="2_iajsu"]
+[ext_resource type="PackedScene" uid="uid://bgfuutrmm2b3v" path="res://Rooms/Mode/Story/LevelManager/levels/RoomBase/room_base.tscn" id="1_roombase"]
+[ext_resource type="Script" uid="uid://dg5tvq6la5uld" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.gd" id="2_iajsu_script"]
+[ext_resource type="Script" uid="uid://dfse47ntl1cba" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_line.gd" id="3_5uc2h"]
+[ext_resource type="PackedScene" uid="uid://dt5qfbw2fbjcc" path="res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn" id="3_gctc8"]
+[ext_resource type="Texture2D" uid="uid://bhhp7uhw8rauc" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/fundo fase.png" id="4_iajsu_bg"]
+[ext_resource type="Texture2D" uid="uid://c18nha187bm0r" path="res://asstes/icon.svg" id="4_mirka"]
+[ext_resource type="AudioStream" uid="uid://cjisdrjdxp7k7" path="res://Rooms/Mode/Story/audios/Vozes/Blip.wav" id="5_2wx6x"]
 
-[node name="Fase1" type="Node2D" unique_id=29031187]
-script = ExtResource("1_iajsu")
-room_background = ExtResource("2_iajsu")
-metadata/_custom_type_script = "uid://dr0bpsxc2saa3"
+[sub_resource type="Resource" id="Resource_wcote"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Ah... mais um dia de trabalho."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
 
-[node name="StoryPlayer" parent="." unique_id=1832787236 instance=ExtResource("2_gctc8")]
+[sub_resource type="Resource" id="Resource_n0kpp"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Sabe, o pessoal lá nas Colônias de Elite acha que o lixo simplesmente desaparece. Eles compram o mais novo implante neural, o hiper-motor da moda, e o que acontece com os modelos do ano passado quando caem em desuso? Eles jogam no grande vazio. E é aí que eu entro."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_mirka"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Olha só para isso... quilômetros e quilômetros de restos tecnológicos. Satélites mortos, drones de entrega abandonados, cruzadores estelares que custavam bilhões e agora não passam de sucata flutuante bloqueando a vista. A galáxia avança implacável, a tecnologia evolui, e simplesmente deixa esse rastro absurdo de peças obsoletas para trás. O universo virou um gigantesco cemitério de metal enferrujado, e eu sou o coveiro."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_2wx6x"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Ou, como eles preferem colocar no meu contrato de baixo escalão: Técnico de Triagem de Resíduos Orbitais."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_af4sh"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "No fim das contas, a gente sabe a verdade. Eu sou só o gari do espaço. Vinte anos respirando ar reciclado da mesma cabine, bebendo café com gosto de óleo de motor e cheirando a ozônio queimado. Não tem glória nenhuma aqui fora."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_pcfpv"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Ninguém faz estátuas para quem limpa a sujeira do universo. Mas, se eu e minha nave não estivéssemos aqui, em três meses os riquinhos não conseguiriam nem tirar seus cruzeiros de luxo da garagem sem bater de frente com um reator termonuclear de quinta mão."
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_263ir"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Ok, vamos trabalhar!"
+portrait = ExtResource("4_mirka")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Curve2D" id="Curve2D_fc0e3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -100, -100, 0, 0, 0, 0, 2020, -100, 0, 0, 0, 0, 2020, 1180, 0, 0, 0, 0, -100, 1180, 0, 0, 0, 0, -100, -100)
+}
+point_count = 5
+
+[node name="Fase1" unique_id=1148374696 instance=ExtResource("1_roombase")]
+script = ExtResource("2_iajsu_script")
+intro_dialogues = Array[ExtResource("3_5uc2h")]([SubResource("Resource_wcote"), SubResource("Resource_n0kpp"), SubResource("Resource_mirka"), SubResource("Resource_2wx6x"), SubResource("Resource_af4sh"), SubResource("Resource_pcfpv"), SubResource("Resource_263ir")])
+room_background = ExtResource("4_iajsu_bg")
+
+[node name="StoryPlayer" parent="." index="6" unique_id=293871870 instance=ExtResource("3_gctc8")]
+position = Vector2(960, 540)
+
+[node name="MobPath" type="Path2D" parent="." index="7" unique_id=1548822569]
+curve = SubResource("Curve2D_fc0e3")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" index="0" unique_id=1274689729]
+position = Vector2(-100, -100)
+
+[node name="SpawnTimer" type="Timer" parent="." index="8" unique_id=1892805875]
+wait_time = 1.5
+
+[node name="Camera2D" type="Camera2D" parent="." index="9" unique_id=516896815]
+position = Vector2(960, 544)
+zoom = Vector2(3.5, 3.5)

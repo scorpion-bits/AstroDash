@@ -15,7 +15,7 @@ bg_color = Color(0.06869546, 0.66411614, 0.8140168, 1)
 bg_color = Color(0.92, 0.04600001, 0.04600001, 1)
 
 [node name="StoryPlayer" type="CharacterBody2D" unique_id=1832787236]
-collision_mask = 7
+collision_mask = 5
 script = ExtResource("1_chmls")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=600521536]
@@ -23,13 +23,21 @@ texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("1_lkl1o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=435167561]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1157761137]
 position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_lkl1o")
 
 [node name="HealthComponent" parent="." unique_id=440873489 instance=ExtResource("3_h0qu4")]
 
 [node name="WeaponComponent" parent="." unique_id=864682556 instance=ExtResource("4_fds1a")]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=926475993]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=575921994]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_lkl1o")
 
 [node name="PlayerUI" type="CanvasLayer" parent="." unique_id=1053241877]
 

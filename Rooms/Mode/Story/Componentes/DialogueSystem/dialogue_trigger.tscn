@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://lwiybe2681yp"]
+
+[ext_resource type="Script" uid="uid://dlcjvfghr74yn" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_trigger.gd" id="1_nhap7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nfiw7"]
+radius = 96.332756
+
+[node name="DialogueTrigger" type="Area2D" unique_id=450119782]
+script = ExtResource("1_nhap7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754896291]
+shape = SubResource("CircleShape2D_nfiw7")

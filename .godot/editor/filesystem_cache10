@@ -1,5 +1,5 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1788574745
+78098b89c88a74ebe8c20117b8754620
+::res://::1788832013
 gdd astrodash.txt::TextFile::-1::1788574199::0::1::::<><><>0<>0<><>::
 task list.txt::TextFile::-1::1788574357::0::1::::<><><>0<>0<><>::
 ::res://asstes/::1788569467
@@ -7,7 +7,9 @@ icon.svg::CompressedTexture2D::6666677631029415611::1788569283::1788569467::1:::
 ::res://asstes/Ost/::1788569466
 game song.mp3::AudioStreamMP3::7000209447985822561::1788569283::1788569466::1::::<><><>0<>0<>7cd3f9f2ceab7e753ccb51b820349954<>res://.godot/imported/game song.mp3-c0b319bdc389faf9b57fa74e10e2e778.mp3str::
 musica_fundo.tscn::PackedScene::2319478673054080707::1788569283::0::1::::<><><>0<>0<><>::uid://c6y7orpq76rg0::::res://asstes/Ost/game song.mp3
-::res://Huds/::1788569283
+::res://Huds/::1788831465
+::res://Huds/Dialogo/::1788832097
+dialogue_ui.tscn::PackedScene::58624170648176913::1788832097::0::1::::<><><>0<>0<><>::uid://cgcl0qr7nv5f3::::res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_ui.gd<>uid://c18nha187bm0r::::res://asstes/icon.svg
 ::res://Huds/HudVersus/::1788569283
 hud_versus.gd::GDScript::214320818089067876::1788569283::0::1::::<>Control<><>0<>0<><>::
 hud_versus.tscn::PackedScene::6536861789437357005::1788569283::0::1::::<><><>0<>0<><>::uid://db23ko8uaruy::::res://Huds/HudVersus/hud_versus.gd
@@ -74,8 +76,40 @@ sigle_player.tscn::PackedScene::1691108687368480766::1788569283::0::1::::<><><>0
 single_player.gd::GDScript::608158009547265626::1788569283::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Rooms/Mode/Singleplayer/Assets/::1788569467
 fundo.png::CompressedTexture2D::3940917214625622730::1788569283::1788569467::1::::<><><>0<>0<>aab2adfd1215e66bb9804485adf1b2bc<>res://.godot/imported/fundo.png-e232686e0e74805d9edea1285921290d.ctex::
-::res://Rooms/Mode/Story/::1788574689
-::res://Rooms/Mode/Story/Componentes/::1788574745
-::res://Rooms/Mode/Story/Componentes/HealthComponent/::1788574789
-health_component.tscn.tscn::PackedScene::3685838425648106955::1788574765::0::1::::<><><>0<>0<><>::
-health_component.gd::GDScript::4576668231412182542::1788574789::0::1::::<>Node<><>0<>0<><>::
+::res://Rooms/Mode/Story/::1788834782
+::res://Rooms/Mode/Story/audios/::1788834789
+::res://Rooms/Mode/Story/audios/Vozes/::1788834805
+Blip.wav::AudioStreamWAV::5422155152380343932::1788834805::1788834805::1::::<><><>0<>0<>0f0df309adc87c570c585e25271522be<>res://.godot/imported/Blip.wav-b2ed5b52f9f4abc2c645aeef1c781025.sample::
+::res://Rooms/Mode/Story/Componentes/::1788830772
+::res://Rooms/Mode/Story/Componentes/DialogueSystem/::1788832548
+dialogue_line.gd::GDScript::7547661426545507914::1788830832::0::1::::DialogueLine<>Resource<><>0<>0<><>::
+dialogue_ui.gd::GDScript::5198816584598013046::1788831625::0::1::::<>CanvasLayer<><>0<>0<><>::
+dialogue_manager.gd::GDScript::2291623157603403927::1788831976::0::1::::<>Node<><>0<>0<><>::
+dialogue_trigger.tscn::PackedScene::818022245575599103::1788832548::0::1::::<><><>0<>0<><>::uid://dlcjvfghr74yn::::res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_trigger.gd
+dialogue_trigger.gd::GDScript::7936052313440314913::1788832542::0::1::::<>Area2D<><>0<>0<><>::
+::res://Rooms/Mode/Story/Componentes/HealthComponent/::1788576007
+health_component.gd::GDScript::4576668231412182542::1788575567::0::1::::HealthComponent<>Node<><>0<>0<><>::
+health_component.tscn::PackedScene::3685838425648106955::1788576007::0::1::::<><><>0<>0<><>::uid://b6g8b7ayrd1hq::::res://Rooms/Mode/Story/Componentes/HealthComponent/health_component.gd
+::res://Rooms/Mode/Story/Componentes/WeaponComponent/::1788577902
+weapon_component.gd::GDScript::8245443715596869512::1788575949::0::1::::WeaponComponent<>Node2D<><>0<>0<><>::
+weapon_component.tscn::PackedScene::721563528789394015::1788577902::0::1::::<><><>0<>0<><>::uid://dpqfiu3suyqai::::res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.gd
+::res://Rooms/Mode/Story/Itens/::1788821982
+::res://Rooms/Mode/Story/Itens/Sucata/::1788822400
+sucata.gd::GDScript::1664166489440619210::1788821997::0::1::::Sucata<>Area2D<><>0<>0<><>::
+sucata.tscn::PackedScene::6452211039264681497::1788828009::0::1::::<><><>0<>0<><>::res://Rooms/Mode/Story/Itens/Sucata/sucata.gd<>uid://c18nha187bm0r::::res://asstes/icon.svg
+::res://Rooms/Mode/Story/LevelManager/::1788578616
+story_level_manager.gd::GDScript::5206199537332334987::1788578459::0::1::::<>Node<><>0<>0<><>::
+story_level_manager.tscn::PackedScene::982074145177613637::1788578616::0::1::::<><><>0<>0<><>::uid://cgf6l0xe7ehpr::::res://Rooms/Mode/Story/LevelManager/story_level_manager.gd
+::res://Rooms/Mode/Story/LevelManager/levels/::1788580298
+::res://Rooms/Mode/Story/LevelManager/levels/Fase1/::1788834716
+fase_1.gd::GDScript::7643518458827387865::1788834716::0::1::::<>RoomBase<><>0<>0<><>::
+fase_1.tscn::PackedScene::8544136441508349853::1788834716::0::1::::<><><>0<>0<><>::uid://bgfuutrmm2b3v::::res://Rooms/Mode/Story/LevelManager/levels/RoomBase/room_base.tscn<>uid://dg5tvq6la5uld::::res://Rooms/Mode/Story/LevelManager/levels/Fase1/fase_1.gd<>uid://dfse47ntl1cba::::res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_line.gd<>uid://dt5qfbw2fbjcc::::res://Rooms/Mode/Story/StoryPlayer/Player/StoryPlayer.tscn<>uid://bhhp7uhw8rauc::::res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/fundo fase.png
+::res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/::1788823005
+fundo fase.png::CompressedTexture2D::2893162196059180866::1788823005::1788823005::1::::<><><>0<>0<>ac1cd3942ce178fe56032ba578870f37<>res://.godot/imported/fundo fase.png-93fc4df41dc71ed480201dc5a8879d67.ctex::
+::res://Rooms/Mode/Story/LevelManager/levels/RoomBase/::1788823412
+room_base.gd::GDScript::8404170321757151580::1788823182::0::1::::RoomBase<>Node2D<><>0<>0<><>::
+room_base.tscn::PackedScene::2819126714792673705::1788823412::0::1::::<><><>0<>0<><>::uid://dr0bpsxc2saa3::::res://Rooms/Mode/Story/LevelManager/levels/RoomBase/room_base.gd
+::res://Rooms/Mode/Story/StoryPlayer/::1788576468
+::res://Rooms/Mode/Story/StoryPlayer/Player/::1788833952
+StoryPlayer.tscn::PackedScene::8555761901420034850::1788832807::0::1::::<><><>0<>0<><>::uid://fhyvnbqtdeux::::res://Rooms/Mode/Story/StoryPlayer/Player/story_player.gd<>uid://cati20jxwhiug::::res://Players/Assets/Sprite-0001.png<>uid://bsrphq0eukbhj::::res://Rooms/Mode/Story/Componentes/HealthComponent/health_component.tscn<>uid://kjsbtb7mkjv8::::res://Rooms/Mode/Story/Componentes/WeaponComponent/weapon_component.tscn
+story_player.gd::GDScript::366890257067814999::1788833952::0::1::::StoryPlayer<>CharacterBody2D<><>0<>0<><>::

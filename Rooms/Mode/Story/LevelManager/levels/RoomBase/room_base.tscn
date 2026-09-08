@@ -22,6 +22,7 @@ height = 480.0
 script = ExtResource("1_u4go6")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1547583057]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(4, 4)
