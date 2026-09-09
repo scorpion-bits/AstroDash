@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dy31h6qenoxo3" path="res://Huds/Dialogo/portraits/Player/Astronauta portrait.png" id="4_2wx6x"]
 [ext_resource type="Texture2D" uid="uid://bhhp7uhw8rauc" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/fundo fase.png" id="4_iajsu_bg"]
 [ext_resource type="AudioStream" uid="uid://cjisdrjdxp7k7" path="res://Rooms/Mode/Story/audios/Vozes/Blip.wav" id="5_2wx6x"]
+[ext_resource type="Texture2D" uid="uid://chy3nf3bvdr0i" path="res://Huds/Dialogo/portraits/Alien1/Alien_portrait.png" id="6_263ir"]
+[ext_resource type="Texture2D" uid="uid://b1ue2l3oajd4e" path="res://Rooms/Mode/Story/LevelManager/levels/Fase1/assets/monitor missão.png" id="8_2wx6x"]
+[ext_resource type="Texture2D" uid="uid://c3ni73kcha2ah" path="res://Perigos/Kamikaze/kamikaze.png" id="9_pcfpv"]
 
 [sub_resource type="Resource" id="Resource_wcote"]
 script = ExtResource("3_5uc2h")
@@ -78,16 +81,93 @@ pitch_base = 0.8
 chars_per_second = 40.0
 metadata/_custom_type_script = "uid://dfse47ntl1cba"
 
+[sub_resource type="Resource" id="Resource_lbviq"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Alien"
+text = "Com licença. Peço as minhas mais sinceras desculpas pela materialização repentina."
+portrait = ExtResource("6_263ir")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 1.4
+pitch_variation = 0.4
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_3qsa8"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Alien"
+text = "A galáxia de vocês é adorável, tem um charme bem rústico."
+portrait = ExtResource("6_263ir")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 1.4
+pitch_variation = 0.3
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_1f6x1"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Alien"
+text = "Mas o motivo da minha visita é estritamente administrativo. Vim informá-los, de forma cordial, que a nossa armada iniciará a dominação completa e irrevogável desta galáxia."
+portrait = ExtResource("6_263ir")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 1.4
+pitch_variation = 0.3
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_xu53b"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Alien"
+text = "Por favor, não desperdicem seu precioso tempo organizando qualquer tipo de resistência. Com todo o respeito, não há absolutamente nada que vocês possam fazer para evitar. A nossa vitória é uma simples garantia matemática. Portanto, sugiro que utilizem essas horas finais de autonomia para relaxar, tomar uma bebida quente e ficar com suas famílias."
+portrait = ExtResource("6_263ir")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 1.4
+pitch_variation = 0.3
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_a0d11"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Alien"
+text = "Ah, e se não for pedir muito, peço a gentileza de repasse este aviso aos outros humanos. Agradeço pela colaboração e tenha um excelente final de tarde!"
+portrait = ExtResource("6_263ir")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 1.4
+pitch_variation = 0.3
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
+[sub_resource type="Resource" id="Resource_24k0g"]
+script = ExtResource("3_5uc2h")
+speaker_name = "Astronauta"
+text = "Será que se eu resolver isso sozinho eu ganho um aumento?"
+portrait = ExtResource("4_2wx6x")
+voice_blip = ExtResource("5_2wx6x")
+pitch_base = 0.8
+chars_per_second = 40.0
+metadata/_custom_type_script = "uid://dfse47ntl1cba"
+
 [sub_resource type="Curve2D" id="Curve2D_fc0e3"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -100, -100, 0, 0, 0, 0, 2020, -100, 0, 0, 0, 0, 2020, 1180, 0, 0, 0, 0, -100, 1180, 0, 0, 0, 0, -100, -100)
 }
 point_count = 5
 
+[sub_resource type="LabelSettings" id="LabelSettings_nfiw7"]
+font_size = 40
+
 [node name="Fase1" unique_id=1148374696 instance=ExtResource("1_roombase")]
 script = ExtResource("2_iajsu_script")
 intro_dialogues = Array[ExtResource("3_5uc2h")]([SubResource("Resource_wcote"), SubResource("Resource_n0kpp"), SubResource("Resource_mirka"), SubResource("Resource_2wx6x"), SubResource("Resource_af4sh"), SubResource("Resource_pcfpv"), SubResource("Resource_263ir")])
+alien_dialogues = Array[ExtResource("3_5uc2h")]([SubResource("Resource_lbviq"), SubResource("Resource_3qsa8"), SubResource("Resource_1f6x1"), SubResource("Resource_xu53b"), SubResource("Resource_a0d11")])
+monologue_dialogues = Array[ExtResource("3_5uc2h")]([SubResource("Resource_24k0g")])
 room_background = ExtResource("4_iajsu_bg")
+
+[node name="Portal" parent="." index="5" unique_id=695805563]
+position = Vector2(1568, 528)
+
+[node name="AnimatedSprite2D" parent="Portal" index="1" unique_id=96808855]
+modulate = Color(0.5662618, 1.485196, 1.9754877, 1)
+frame_progress = 0.7889087
 
 [node name="StoryPlayer" parent="." index="6" unique_id=293871870 instance=ExtResource("3_gctc8")]
 position = Vector2(960, 540)
@@ -104,3 +184,65 @@ wait_time = 1.5
 [node name="Camera2D" type="Camera2D" parent="." index="9" unique_id=516896815]
 position = Vector2(960, 544)
 zoom = Vector2(3.5, 3.5)
+
+[node name="FaseUI" type="CanvasLayer" parent="." index="10" unique_id=2094919885]
+
+[node name="MonitorMissao" type="TextureRect" parent="FaseUI" index="0" unique_id=505016787]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -119.0
+offset_right = 124.0
+offset_bottom = -59.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_2wx6x")
+
+[node name="LabelMissao" type="Label" parent="FaseUI/MonitorMissao" index="0" unique_id=1607922746]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.75
+offset_top = 16.0
+offset_right = 300.375
+offset_bottom = 129.0
+grow_horizontal = 2
+scale = Vector2(0.24, 0.24)
+text = "Missão:
+Colete 15 Sucatas"
+label_settings = SubResource("LabelSettings_nfiw7")
+horizontal_alignment = 1
+
+[node name="LabelContador" type="Label" parent="FaseUI/MonitorMissao" index="1" unique_id=1702708113]
+visible = false
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.999996
+offset_top = 14.75
+offset_right = 118.0
+offset_bottom = 127.75
+grow_horizontal = 2
+scale = Vector2(0.24, 0.24)
+text = "Sucatas:
+0/15"
+label_settings = SubResource("LabelSettings_nfiw7")
+horizontal_alignment = 1
+
+[node name="AlienCutscene" type="Sprite2D" parent="." index="11" unique_id=507672707]
+visible = false
+position = Vector2(1560, 520)
+texture = ExtResource("9_pcfpv")
+
+[node name="PosicaoAlien" type="Marker2D" parent="." index="12" unique_id=2105353206]
+position = Vector2(1384, 512)

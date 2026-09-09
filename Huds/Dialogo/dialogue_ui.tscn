@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cgcl0qr7nv5f3" path="res://Rooms/Mode/Story/Componentes/DialogueSystem/dialogue_ui.gd" id="1_oqfc2"]
 [ext_resource type="Texture2D" uid="uid://dy31h6qenoxo3" path="res://Huds/Dialogo/portraits/Player/Astronauta portrait.png" id="2_oqfc2"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2wx6x"]
+font_size = 40
+
 [node name="DialogueUI" type="CanvasLayer" unique_id=699159936]
 script = ExtResource("1_oqfc2")
 
@@ -28,17 +31,19 @@ offset_left = 344.0
 offset_top = 24.0
 offset_right = 391.0
 offset_bottom = 47.0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.8, 0.8)
 text = "Nome"
+label_settings = SubResource("LabelSettings_2wx6x")
 
 [node name="TextLabel" type="RichTextLabel" parent="Background" unique_id=212237571]
 texture_filter = 1
 layout_mode = 0
 offset_left = 344.0
-offset_top = 64.0
-offset_right = 1181.3333
-offset_bottom = 170.66663
-scale = Vector2(1.5, 1.5)
+offset_top = 72.00002
+offset_right = 2437.3335
+offset_bottom = 325.3334
+scale = Vector2(0.6, 0.6)
+theme_override_font_sizes/normal_font_size = 40
 text = "Ola isso aqui é um teste!"
 fit_content = true
 

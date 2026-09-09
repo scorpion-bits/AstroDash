@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cklpuppiti4ds" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/energy_bar.png" id="5_tc5q5"]
 [ext_resource type="Texture2D" uid="uid://d3sp6nax76hjm" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/healthbar_over.png" id="5_u3mxw"]
 [ext_resource type="Texture2D" uid="uid://c7pniq6wvupda" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/health_bar.png" id="6_tc5q5"]
+[ext_resource type="Texture2D" uid="uid://ck602wgja5txj" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/Shield_bar.png" id="7_24kff"]
 [ext_resource type="Texture2D" uid="uid://c6y31lryr5uxg" path="res://Rooms/Mode/Story/Componentes/HealthComponent/assets/prtraits_sheets.png" id="9_0laih"]
 [ext_resource type="PackedScene" uid="uid://hqtn0as24k78" path="res://Rooms/Mode/Story/Componentes/ShakeComponent/shake_component.tscn" id="10_t0uks"]
 
@@ -104,6 +105,16 @@ value = 100.0
 texture_progress = ExtResource("5_tc5q5")
 tint_progress = Color(0.56078434, 0.5921569, 0.2901961, 0.81960785)
 
+[node name="GhostShieldBar" type="TextureProgressBar" parent="PlayerUI" unique_id=43373478]
+offset_left = 146.0
+offset_top = 36.0
+offset_right = 178.0
+offset_bottom = 38.0
+scale = Vector2(4, 4)
+value = 100.0
+texture_progress = ExtResource("7_24kff")
+tint_progress = Color(0, 1, 0.7764706, 0.7490196)
+
 [node name="GhostHealthUI" type="TextureProgressBar" parent="PlayerUI" unique_id=1291661378]
 offset_left = 169.99994
 offset_top = 60.0
@@ -138,6 +149,15 @@ texture_over = ExtResource("5_u3mxw")
 texture_progress = ExtResource("6_tc5q5")
 texture_progress_offset = Vector2(40, 12)
 script = ExtResource("5_h0qu4")
+
+[node name="ShieldBar" type="TextureProgressBar" parent="PlayerUI" unique_id=1893438647]
+offset_left = 145.8333
+offset_top = 35.83333
+offset_right = 177.8333
+offset_bottom = 37.83333
+scale = Vector2(4, 4)
+value = 100.0
+texture_progress = ExtResource("7_24kff")
 
 [node name="ShakeComponent" parent="PlayerUI" unique_id=1040993573 node_paths=PackedStringArray("target") instance=ExtResource("10_t0uks")]
 target = NodePath("../AstronautPortrait")

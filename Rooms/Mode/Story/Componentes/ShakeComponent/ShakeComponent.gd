@@ -60,7 +60,6 @@ func trigger():
 	var iteration_duration = 1.0 / frequency
 	var total_iterations : int = duration / iteration_duration
 	var iteration_percentage = 1.0 / total_iterations
-
 	var i = total_iterations
 	var round = 0
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgfuutrmm2b3v"]
 
 [ext_resource type="Script" uid="uid://dr0bpsxc2saa3" path="res://Rooms/Mode/Story/LevelManager/levels/RoomBase/room_base.gd" id="1_u4go6"]
+[ext_resource type="Texture2D" uid="uid://c322jgef4gcpa" path="res://Rooms/Mode/Story/LevelManager/levels/RoomBase/Assets/Dimensional_Portal.png" id="2_4c0fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdlr"]
 size = Vector2(1952, 16)
@@ -17,6 +18,56 @@ size = Vector2(1952, 16)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4c0fh"]
 radius = 112.0
 height = 480.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmu2w"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2b4x"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mypvk"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wcyy"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkhj"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dr03"]
+atlas = ExtResource("2_4c0fh")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nfiw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmu2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2b4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mypvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wcyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dr03")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="RoomBase" type="Node2D" unique_id=1201731153]
 script = ExtResource("1_u4go6")
@@ -52,9 +103,16 @@ position = Vector2(960, -8)
 shape = SubResource("RectangleShape2D_qmu2w")
 
 [node name="Portal" type="Area2D" parent="." unique_id=695805563]
-visible = false
 modulate = Color(0.5467444, 0.5833054, 0.25205347, 1)
+position = Vector2(1553, 537)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal" unique_id=1686053215]
-position = Vector2(1568, 512)
+position = Vector2(11, 0)
 shape = SubResource("CapsuleShape2D_4c0fh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal" unique_id=96808855]
+position = Vector2(-1, -1)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_nfiw7")
+autoplay = "default"
+frame_progress = 0.7866116
